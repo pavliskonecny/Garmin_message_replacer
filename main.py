@@ -97,5 +97,3 @@ def myCons():
 app = QtWidgets.QApplication([])
 window = Main_window()
 sys.exit(app.exec())
-
-#pyuic5 -o gui/Main_form.py gui/Main_form.ui

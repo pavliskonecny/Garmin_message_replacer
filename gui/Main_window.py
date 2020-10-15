@@ -13,7 +13,7 @@ class Main_window(QtWidgets.QMainWindow):
         self.show()
         self._load_temp_files()
 
-        self.ui.psbStart.clicked.connect(self._btnStartOnClick)
+        self.ui.psbStart.clicked.connect(self._btnStart_onClick)
 
     def _load_temp_files(self):
         base_path = ""
@@ -26,7 +26,7 @@ class Main_window(QtWidgets.QMainWindow):
             icon_path = base_path + '\\files\\ico.ico'
             self.setWindowIcon(QtGui.QIcon(icon_path))
 
-    def _btnStartOnClick(self):
+    def _btnStart_onClick(self):
         val = self.ui.prbProgbar.value()
         val += 10
         if val > 100:

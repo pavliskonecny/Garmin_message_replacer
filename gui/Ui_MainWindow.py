@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'gui/Main_win.ui'
+# Form implementation generated from reading ui file 'gui/Main_form.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.1
 #
@@ -68,9 +68,18 @@ class Ui_MainWindow(object):
         self.gridLayout.addWidget(self.psbStart, 7, 0, 1, 1)
         self.verticalLayout.addWidget(self.frmMain)
         self.prbProgbar = QtWidgets.QProgressBar(self.centralwidget)
-        self.prbProgbar.setStyleSheet("color: rgb(0, 124, 195);\n"
-"")
+        self.prbProgbar.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.prbProgbar.setAutoFillBackground(False)
+        self.prbProgbar.setStyleSheet("QProgressBar::chunk {\n"
+"background-color: rgb(0, 124, 195);\n"
+"};")
+        self.prbProgbar.setInputMethodHints(QtCore.Qt.ImhNone)
         self.prbProgbar.setProperty("value", 24)
+        self.prbProgbar.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.prbProgbar.setTextVisible(True)
+        self.prbProgbar.setOrientation(QtCore.Qt.Horizontal)
+        self.prbProgbar.setInvertedAppearance(False)
+        self.prbProgbar.setTextDirection(QtWidgets.QProgressBar.TopToBottom)
         self.prbProgbar.setObjectName("prbProgbar")
         self.verticalLayout.addWidget(self.prbProgbar)
         MainWindow.setCentralWidget(self.centralwidget)
@@ -87,3 +96,4 @@ class Ui_MainWindow(object):
 "language file?"))
         self.psbStart.setText(_translate("MainWindow", "START\n"
 "Conversion"))
+        self.prbProgbar.setFormat(_translate("MainWindow", "%p%"))

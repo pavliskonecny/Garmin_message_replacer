@@ -1,5 +1,5 @@
 """***********************************************************************"""
-"""*** The GUI source code for changing messages (response text) on Garmin ***"""
+"""*** The source code for changing messages (response text) on Garmin ***"""
 """***********************************************************************"""
 
 """Original messages are:"""
@@ -32,8 +32,9 @@ exception_list = \
 
 file_name = 'Czech.gtt'
 
-from PyQt5 import QtWidgets
-import gui.Main_win
+from PyQt5 import QtWidgets, QtGui
+import sys
+from gui.Main_window import Main_window
 
 """
 def replace_lang(text: str):
@@ -88,32 +89,13 @@ def myCons():
         input("Press enter to exit")
 """
 
-# pyuic5 -o gui/Main_win.py gui/Main_win.ui
-import sys
-from PyQt5 import QtGui
 
 
-def load_temp_files():
-    base_path = ""
-    try:
-        base_path = sys._MEIPASS
-    except Exception:
-        base_path = sys.path[1]
-    finally:
-        icon_path = base_path + '\\files\\ico.ico'
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(icon_path), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        window.setWindowIcon(icon)
+
 
 
 app = QtWidgets.QApplication([])
-window = QtWidgets.QMainWindow()
-win = gui.Main_win.Ui_MainWindow()
+window = Main_window()
+sys.exit(app.exec())
 
-win.setupUi(window)
-win.retranslateUi(window)
-
-win.psbStart.clicked.connect(load_temp_files)
-
-window.show()
-app.exec()
+#pyuic5 -o gui/Main_form.py gui/Main_form.ui

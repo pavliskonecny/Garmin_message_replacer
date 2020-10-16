@@ -14,8 +14,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(500, 280)
-        MainWindow.setMinimumSize(QtCore.QSize(500, 280))
+        MainWindow.resize(500, 250)
+        MainWindow.setMinimumSize(QtCore.QSize(500, 250))
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("gui\\../files/garmin.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
@@ -28,7 +28,7 @@ class Ui_MainWindow(object):
         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
         self.verticalLayout.setObjectName("verticalLayout")
         self.lblHint = QtWidgets.QLabel(self.centralwidget)
-        self.lblHint.setMinimumSize(QtCore.QSize(0, 30))
+        self.lblHint.setMinimumSize(QtCore.QSize(0, 20))
         self.lblHint.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.lblHint.setAlignment(QtCore.Qt.AlignCenter)
         self.lblHint.setObjectName("lblHint")
@@ -61,21 +61,6 @@ class Ui_MainWindow(object):
         self.psbStart.setObjectName("psbStart")
         self.gridLayout.addWidget(self.psbStart, 6, 0, 1, 1)
         self.verticalLayout.addWidget(self.frmMain)
-        self.prbProgbar = QtWidgets.QProgressBar(self.centralwidget)
-        self.prbProgbar.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.prbProgbar.setAutoFillBackground(False)
-        self.prbProgbar.setStyleSheet("QProgressBar::chunk {\n"
-"background-color: rgb(0, 124, 195);\n"
-"};")
-        self.prbProgbar.setInputMethodHints(QtCore.Qt.ImhNone)
-        self.prbProgbar.setProperty("value", 0)
-        self.prbProgbar.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.prbProgbar.setTextVisible(True)
-        self.prbProgbar.setOrientation(QtCore.Qt.Horizontal)
-        self.prbProgbar.setInvertedAppearance(False)
-        self.prbProgbar.setTextDirection(QtWidgets.QProgressBar.TopToBottom)
-        self.prbProgbar.setObjectName("prbProgbar")
-        self.verticalLayout.addWidget(self.prbProgbar)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -88,4 +73,3 @@ class Ui_MainWindow(object):
         self.psbBrowse.setText(_translate("MainWindow", "Browse"))
         self.psbStart.setText(_translate("MainWindow", "START\n"
 "Conversion"))
-        self.prbProgbar.setFormat(_translate("MainWindow", "%p%"))

@@ -71,7 +71,8 @@ class Main_window(QMainWindow):
             QMessageBox.critical(self, "Unexpected error",
                                  "Please, as first select Garmin Language file\n" + str(ExGlobal))
     def _write_file(self, text: str) -> bool:
-        file_name, _ = QFileDialog.getSaveFileName(self, "Save new File as", "", "Garmin Lang Files (*.gtt)")
+        propose_file_name = "new_" + my_files.get_file_name(self.ui.lnePath.text())
+        file_name, _ = QFileDialog.getSaveFileName(self, "Save File as", propose_file_name, "Garmin Lang Files (*.gtt)")
         if file_name:
             my_files.write_file(file_name, text)
             return True

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'gui/Main_form.ui'
+# Form implementation generated from reading ui file 'gui/Ui_MainWindow.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.1
 #
@@ -41,31 +41,25 @@ class Ui_MainWindow(object):
         self.frmMain.setObjectName("frmMain")
         self.gridLayout = QtWidgets.QGridLayout(self.frmMain)
         self.gridLayout.setObjectName("gridLayout")
-        self.txeState = QtWidgets.QTextEdit(self.frmMain)
-        self.txeState.setStyleSheet("")
-        self.txeState.setReadOnly(True)
-        self.txeState.setObjectName("txeState")
-        self.gridLayout.addWidget(self.txeState, 7, 2, 1, 1)
+        self.psbBrowse = QtWidgets.QPushButton(self.frmMain)
+        self.psbBrowse.setObjectName("psbBrowse")
+        self.gridLayout.addWidget(self.psbBrowse, 4, 0, 1, 1)
         self.lnePath = QtWidgets.QLineEdit(self.frmMain)
         self.lnePath.setEnabled(True)
         self.lnePath.setReadOnly(True)
         self.lnePath.setObjectName("lnePath")
         self.gridLayout.addWidget(self.lnePath, 4, 2, 1, 1)
-        self.psbBrowse = QtWidgets.QPushButton(self.frmMain)
-        self.psbBrowse.setObjectName("psbBrowse")
-        self.gridLayout.addWidget(self.psbBrowse, 4, 0, 1, 1)
-        self.chckOverwrite = QtWidgets.QCheckBox(self.frmMain)
-        self.chckOverwrite.setToolTip("")
-        self.chckOverwrite.setWhatsThis("")
-        self.chckOverwrite.setShortcut("")
-        self.chckOverwrite.setTristate(False)
-        self.chckOverwrite.setObjectName("chckOverwrite")
-        self.gridLayout.addWidget(self.chckOverwrite, 5, 0, 1, 1)
+        self.txeState = QtWidgets.QTextEdit(self.frmMain)
+        self.txeState.setStyleSheet("")
+        self.txeState.setReadOnly(True)
+        self.txeState.setObjectName("txeState")
+        self.gridLayout.addWidget(self.txeState, 6, 2, 1, 1)
         self.psbStart = QtWidgets.QPushButton(self.frmMain)
+        self.psbStart.setMinimumSize(QtCore.QSize(90, 0))
         self.psbStart.setStyleSheet("background-color: rgb(0, 124, 195);\n"
 "color: rgb(225, 225, 225);")
         self.psbStart.setObjectName("psbStart")
-        self.gridLayout.addWidget(self.psbStart, 7, 0, 1, 1)
+        self.gridLayout.addWidget(self.psbStart, 6, 0, 1, 1)
         self.verticalLayout.addWidget(self.frmMain)
         self.prbProgbar = QtWidgets.QProgressBar(self.centralwidget)
         self.prbProgbar.setLayoutDirection(QtCore.Qt.LeftToRight)
@@ -74,7 +68,7 @@ class Ui_MainWindow(object):
 "background-color: rgb(0, 124, 195);\n"
 "};")
         self.prbProgbar.setInputMethodHints(QtCore.Qt.ImhNone)
-        self.prbProgbar.setProperty("value", 24)
+        self.prbProgbar.setProperty("value", 0)
         self.prbProgbar.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.prbProgbar.setTextVisible(True)
         self.prbProgbar.setOrientation(QtCore.Qt.Horizontal)
@@ -90,10 +84,8 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Garmin Language message replacer"))
-        self.lblHint.setText(_translate("MainWindow", "Please, select desired language file for conversion:        "))
+        self.lblHint.setText(_translate("MainWindow", "Please, select desired language file to replace messages:"))
         self.psbBrowse.setText(_translate("MainWindow", "Browse"))
-        self.chckOverwrite.setText(_translate("MainWindow", "Overwrite\n"
-"language file?"))
         self.psbStart.setText(_translate("MainWindow", "START\n"
 "Conversion"))
         self.prbProgbar.setFormat(_translate("MainWindow", "%p%"))

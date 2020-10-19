@@ -62,11 +62,14 @@ class Main_window(QMainWindow):
                 my_files.write_file(target_file_name, target_text)
                 self._add_output("**** DONE *****")
         except ValueError as ExValErr:
-            QMessageBox.critical(self, "Text position error: ", str(ExValErr))
+            self._add_output("ERROR")
+            QMessageBox.critical(self, "TAG error: ", str(ExValErr))
         except FileNotFoundError as ExFileNotFound:
+            self._add_output("ERROR")
             QMessageBox.information(self, "File doesn't exist",
                                     "Please, as first select Garmin Language file\n" + str(ExFileNotFound))
         except Exception as ExGlobal:
+            self._add_output("ERROR")
             QMessageBox.critical(self, "Unexpected error", "Unexpected error: " + str(ExGlobal))
 
     def _get_save_file_name(self):

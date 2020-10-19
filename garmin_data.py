@@ -74,8 +74,7 @@ def replace2(text: str) -> str:
         tag_pos = text.index(tag)
         start = text.index("<txt>", tag_pos)
         end = text.index("</txt>", tag_pos)
-        #text = text[:start+5] + str(txt) + text[end:]
-        text = ''.join((text[:start+5], txt, text[end:]))
+        text = text[:start+5] + str(txt) + text[end:]
 
     # Check if the last char is ENTER. If that you should remove it,
     # because the row count must be the same like before

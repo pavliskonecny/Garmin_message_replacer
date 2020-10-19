@@ -92,7 +92,7 @@
         </widget>
        </item>
        <item row="6" column="2">
-        <widget class="QTextEdit" name="txeState">
+        <widget class="QTextEdit" name="txeOutput">
          <property name="styleSheet">
           <string notr="true"/>
          </property>

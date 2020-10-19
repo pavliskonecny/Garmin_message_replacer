@@ -6,7 +6,7 @@ from gui.Ui_MainWindow import Ui_MainWindow
 import sys
 
 import others.my_files as my_files
-from others.my_time import My_time
+from others.My_time import My_Time
 import garmin_data
 
 
@@ -18,7 +18,7 @@ class Main_window(QMainWindow):
         self.ui.setupUi(self)
         self.show()
 
-        self._time_stamp = My_time(4)
+        self._time_stamp = My_Time(4)
         self._load_temp_files()
         self._init_path_file()
 
@@ -40,84 +40,44 @@ class Main_window(QMainWindow):
             self.ui.lnePath.setText(my_files.get_abs_path(garmin_data.file_name))
 
     def btnBrowse_onClick(self):
-        # file_name, _ = QFileDialog.getOpenFileName(self, "Open File", "", "Garmin Lang Files (*.gtt);;All Files (*)")
         file_name, _ = QFileDialog.getOpenFileName(self, "Open File", "", "Garmin Lang Files (*.gtt)")
         if file_name:
             self.ui.lnePath.setText(file_name)
 
     def btnStart_onClick(self):
         try:
-            self._add_text("**** START *****")
-            self._add_text("Reading file ..... ")
+            self._add_output("**** START *****")
+            self._add_output("Reading file ..... ")
 
-            file_name = self.ui.lnePath.text()
-            original_text = my_files.read_file(file_name)
+            source_file_name = self.ui.lnePath.text()
+            source_text = my_files.read_file(source_file_name)
 
-            self._add_text("Replacing ..... ")
-            replaced_text = self._replace_lang(original_text)
+            self._add_output("Replacing ..... ")
+            target_text = garmin_data.replace(source_text)
 
-            self._add_text("Writing file ..... ")
-
-            if not self._write_file(replaced_text):
-                self._add_text("**** FILE WAS NOT SAVED *****")
+            self._add_output("Writing file ..... ")
+            target_file_name = self._get_save_file_name()
+            if not target_file_name:
+                self._add_output("**** FILE SAVING INTERRUPT BY USER *****")
             else:
-                self._add_text("**** DONE *****")
+                my_files.write_file(target_file_name, target_text)
+                self._add_output("**** DONE *****")
         except ValueError as ExValErr:
-            QMessageBox.critical(self, "Text position error", str(ExValErr))
+            QMessageBox.critical(self, "Text position error: ", str(ExValErr))
         except FileNotFoundError as ExFileNotFound:
             QMessageBox.information(self, "File doesn't exist",
                                     "Please, as first select Garmin Language file\n" + str(ExFileNotFound))
         except Exception as ExGlobal:
-            QMessageBox.critical(self, "Unexpected error",
-                                 "Please, as first select Garmin Language file\n" + str(ExGlobal))
-    def _write_file(self, text: str) -> bool:
+            QMessageBox.critical(self, "Unexpected error", "Unexpected error: " + str(ExGlobal))
+
+    def _get_save_file_name(self):
         propose_file_name = "new_" + my_files.get_file_name(self.ui.lnePath.text())
         file_name, _ = QFileDialog.getSaveFileName(self, "Save File as", propose_file_name, "Garmin Lang Files (*.gtt)")
-        if file_name:
-            my_files.write_file(file_name, text)
-            return True
-        else:
-            return False
+        return file_name
 
-    def _add_text(self, new_text: str):
-        text = self.ui.txeState.toPlainText()
+    def _add_output(self, new_text: str):
+        text = self.ui.txeOutput.toPlainText()
         if text:
             text += "\n"
         text += self._time_stamp.get_time_stamp() + new_text
-        self.ui.txeState.setText(text)
-
-    def _replace_lang(self, text: str):
-        for i in range(len(garmin_data.change_list)):
-            orig_item = garmin_data.change_list[i][0]
-            replace_item = garmin_data.change_list[i][1]
-            count = text.count(orig_item)
-
-            if count != 2:
-                if not (orig_item in garmin_data.exception_list) or count != 1:
-                    raise ValueError("Can not be find text - " + str(i + 1) + ". " + orig_item)
-            text = text.replace(orig_item, replace_item)
-
-        # Check if the last char is ENTER. If that you should remove it,
-        # because the row count must be the same like before
-        last_char = text[len(text) - 1:len(text)]
-        if last_char == '\n':
-            text = text[0:len(text) - 1]
-
-        return text
-
-
-        """
-        res = qm.question(self, 'Title', "Are you sure to reset all the values?", qm.Yes | qm.No)
-        print(type(res))
-
-        if res == QMessageBox.Yes:
-            print("yes")
-        else:
-            qm.information(self, '', "Nothing Changed", qm.Ok)
-
-        val = self.ui.prbProgbar.value()
-        val += 10
-        if val > 100:
-            val = 100
-        self.ui.prbProgbar.setValue(val)
-        """
+        self.ui.txeOutput.setText(text)

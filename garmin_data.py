@@ -28,3 +28,25 @@ exception_list = \
     ['Odesláno z mého zařízení Garmin']
 
 file_name = 'Czech.gtt'
+
+
+def replace(text: str):
+    for i in range(len(change_list)):
+        orig_item = change_list[i][0]
+        replace_item = change_list[i][1]
+        count = text.count(orig_item)
+
+        if count != 2:
+            if not (orig_item in exception_list) or count != 1:
+                raise ValueError("Can not be find text - " + str(i + 1) + ". " + orig_item)
+        text = text.replace(orig_item, replace_item)
+
+    # Check if the last char is ENTER. If that you should remove it,
+    # because the row count must be the same like before
+    last_char = text[len(text) - 1:len(text)]
+    if last_char == '\n':
+        text = text[0:len(text) - 1]
+
+    return text
+
+

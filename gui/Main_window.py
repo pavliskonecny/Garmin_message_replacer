@@ -52,7 +52,7 @@ class Main_window(QMainWindow):
             source_text = my_files.read_file(source_file_name)
 
             self._add_output("Replacing ..... ")
-            target_text = garmin_data.replace(source_text)
+            target_text = garmin_data.replace2(source_text)
 
             self._add_output("Writing file ..... ")
             target_file_name = self._get_save_file_name()

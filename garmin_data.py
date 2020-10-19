@@ -10,7 +10,6 @@
 """Téměř u cíle."""
 """Jste v polovině."""
 
-
 # First column are original texts, second column are replaced texts
 CHANGE_LIST = [
     ['OK.', 'OK'],  # ...it can be not safety, because it can be many times inside the file.
@@ -19,7 +18,7 @@ CHANGE_LIST = [
     ['Teď nemůžu.', 'Za chvíli jsem tam!'],
     ['Se zpožděním.', 'Budu mít zpoždění.'],
     ['Téměř u cíle.', 'Dorazím za 20 minut.'],
-    ['Jste v polovině.', 'Dorazím za 30 minut.'],
+    ['Jste v polovině.', 'Dorazím za 30 minut.'],
     ['Odesláno z mého zařízení Garmin', 'Odesláno ze zařízení Garmin']
 ]
 
@@ -29,8 +28,26 @@ EXCEPTION_LIST = \
 
 FILE_NAME = 'Czech.gtt'
 
+DICTIONARY = dict(
+    TXT_CANNED_MESSAGE_List_Okay_STR_M="OK",
+    TXT_CANNED_MESSAGE_Prompt_Okay_STR_M="OK",
+    TXT_CANNED_MESSAGE_List_Out_Riding_STR_M="Jsem na kole. Ozvu se později.",
+    TXT_CANNED_MESSAGE_Prompt_Out_Riding_STR_M="Jsem na kole. Ozvu se později.",
+    TXT_CANNED_MESSAGE_List_Cant_Talk_Now_STR_M="Teď nemůžu mluvit. Ozvu se.",
+    TXT_CANNED_MESSAGE_Prompt_Cant_Talk_Now_STR_M="Teď nemůžu mluvit. Ozvu se.",
+    TXT_CANNED_MESSAGE_List_Busy_At_The_Moment_STR_M="Za chvíli jsem tam!",
+    TXT_CANNED_MESSAGE_Prompt_Busy_At_The_Moment_STR_M="Za chvíli jsem tam!",
+    TXT_CANNED_MESSAGE_List_Running_Late_STR_M="Budu mít zpoždění.",
+    TXT_CANNED_MESSAGE_Prompt_Running_Late_STR_M="Budu mít zpoždění.",
+    TXT_CANNED_MESSAGE_List_Almost_There_STR_M="Dorazím za 20 minut.",
+    TXT_CANNED_MESSAGE_Prompt_Almost_There_STR_M="Dorazím za 20 minut.",
+    TXT_CANNED_MESSAGE_List_Halfway_STR_M="Dorazím za 30 minut.",
+    TXT_CANNED_MESSAGE_Prompt_Halfway_STR_M="Dorazím za 30 minut.",
+    TXT_CANNED_MESSAGE_Signature_STR_M="Odesláno ze zařízení Garmin",
+)
 
-def replace(text: str):
+
+def replace(text: str) -> str:
     for i in range(len(CHANGE_LIST)):
         orig_item = CHANGE_LIST[i][0]
         replace_item = CHANGE_LIST[i][1]
@@ -46,6 +63,24 @@ def replace(text: str):
     last_char = text[len(text) - 1:len(text)]
     if last_char == '\n':
         text = text[0:len(text) - 1]
+
+    return text
+
+
+def replace2(text: str) -> str:
+    for tag, txt in DICTIONARY.items():
+        if text.count(tag) != 1:
+            raise ValueError("TAG occured more times or was not found: " + tag)
+        tag_pos = text.index(tag)
+        start = text.index("<txt>", tag_pos)
+        end = text.index("</txt>", tag_pos)
+        #text = text[:start+5] + str(txt) + text[end:]
+        text = ''.join((text[:start+5], txt, text[end:]))
+
+    # Check if the last char is ENTER. If that you should remove it,
+    # because the row count must be the same like before
+    if text.endswith("\n"):
+        text = text[:-1]
 
     return text
 

@@ -78,7 +78,7 @@ def replace(text: str) -> str:
 def replace2(text: str) -> str:
     for tag, txt in DICTIONARY.items():
         if text.count(tag) != 1:
-            raise ValueError("TAG occured more times or was not found: " + tag)
+            raise ValueError("TAG occurred more times or was not found: " + tag)
         tag_pos = text.index(tag)
         start = text.index("<txt>", tag_pos)
         end = text.index("</txt>", tag_pos)

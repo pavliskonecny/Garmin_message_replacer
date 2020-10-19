@@ -1,4 +1,5 @@
 from os import path
+import sys
 
 
 def read_file(f_name: str) -> str:
@@ -19,20 +20,36 @@ def write_file(f_name: str, text: str):
 
 def exist_file(file_name: str) -> bool:
     """
-    function will return bool of existing file
+    function return bool of existing file
     """
     return path.isfile(file_name)
 
 
 def get_abs_path(file_name: str) -> str:
     """
-    function will return absolute path from relative file name
+    function return absolute path from relative file name
     """
     return path.abspath(file_name)
 
 
 def get_file_name(file_path: str) -> str:
     """
-    function will return file name from absolute path
+    function return file name from absolute file path
     """
     return path.basename(file_path)
+
+
+def get_project_folder_path() -> str:
+    """
+    function return absolute project folder path
+    """
+    # res = str(os.path.abspath(os.curdir))  #by this you will get current FILE folder, not PROJECT folder
+    # res = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  #by this you will get path without last folder
+    return str(sys.path[1])
+
+
+def get_temp_project_folder_path() -> str:
+    """
+    function return temp absolute project folder path
+    """
+    return str(sys._MEIPASS)

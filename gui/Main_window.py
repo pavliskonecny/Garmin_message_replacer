@@ -3,7 +3,6 @@
 from PyQt5.QtWidgets import QMainWindow, QFileDialog, QMessageBox
 from PyQt5.QtGui import QIcon
 from gui.Ui_MainWindow import Ui_MainWindow
-import sys
 
 import others.my_files as my_files
 from others.My_time import My_Time
@@ -28,16 +27,16 @@ class Main_window(QMainWindow):
     def _load_temp_files(self):
         base_path = ""
         try:
-            base_path = sys._MEIPASS
+            base_path = my_files.get_temp_project_folder_path()
         except Exception:
-            base_path = sys.path[1]
+            base_path = my_files.get_project_folder_path()
         finally:
             icon_path = base_path + '\\files\\ico.ico'
             self.setWindowIcon(QIcon(icon_path))
 
     def _init_path_file(self):
-        if my_files.exist_file(garmin_data.file_name):
-            self.ui.lnePath.setText(my_files.get_abs_path(garmin_data.file_name))
+        if my_files.exist_file(garmin_data.FILE_NAME):
+            self.ui.lnePath.setText(my_files.get_abs_path(garmin_data.FILE_NAME))
 
     def btnBrowse_onClick(self):
         file_name, _ = QFileDialog.getOpenFileName(self, "Open File", "", "Garmin Lang Files (*.gtt)")

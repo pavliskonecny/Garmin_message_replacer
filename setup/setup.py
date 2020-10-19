@@ -5,16 +5,18 @@ import sys
 # CHANGE THIS PARAMETERS AS NEEDED
 py_file_name = 'main.py'
 
-add_exe_file_name = True    # False will make exe file name the same like project name
+add_exe_file_name = True    # False will make exe file name the same like project name folder
 exe_file_name = "Garmin Lang Replacer"
 
 add_icon = True             # Add exe file icon
 ico_name = "files\\ico.ico"
 
-add_folder = True           # Include this folder to exe file
+add_folder = True           # Include folder to exe file
 add_folder_name = "files"
 
 gui_app = True              # False will take console app, True will take GUI app
+
+one_file = True             # True means one exe file. False means folder with necessary files and exe file
 
 # ******************************************************
 
@@ -23,7 +25,10 @@ def make_build():
     project_name = get_project_name()
     project_folder = get_project_folder()
 
-    cmd = "pyinstaller --onefile --noconfirm --log-level=WARN --clean"
+    cmd = "pyinstaller --noconfirm --log-level=WARN --clean"
+
+    if one_file:
+        cmd += " --onefile"
 
     if gui_app:
         cmd += " --noconsole"

@@ -1,5 +1,6 @@
 from os import path
 import sys
+import json
 
 
 def read_file(f_name: str) -> str:
@@ -53,3 +54,13 @@ def get_project_folder_path() -> str:
     function return temp absolute project folder path
     """
 #    return str(sys._MEIPASS)
+
+
+def _write_json(json_file_name: str, data: object):
+    j_data = json.dumps(data, ensure_ascii=False, indent=2)
+    write_file(json_file_name, j_data)
+
+
+def _read_json(json_file_name: str) -> str:
+    j_data = json.loads(read_file(json_file_name))
+    return j_data

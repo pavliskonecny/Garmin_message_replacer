@@ -1,3 +1,4 @@
+from others import my_files
 
 DICTIONARY = dict(
     TXT_CANNED_MESSAGE_List_Okay_STR_M="OK",                                        # OK.
@@ -53,9 +54,10 @@ EXCEPTION_LIST = \
     ['Odesláno z mého zařízení Garmin']
 
 FILE_NAME = 'Czech.gtt'
+JSON_FILE_NAME = "data.json"
 
 
-def replace(text: str) -> str:
+def replace_old(text: str) -> str:
     for i in range(len(CHANGE_LIST)):
         orig_item = CHANGE_LIST[i][0]
         replace_item = CHANGE_LIST[i][1]
@@ -75,7 +77,9 @@ def replace(text: str) -> str:
     return text
 
 
-def replace2(text: str) -> str:
+def replace(text: str) -> str:
+    DICTIONARY = dict(my_files._read_json(JSON_FILE_NAME))
+
     for tag, txt in DICTIONARY.items():
         if text.count(tag) != 1:
             raise ValueError("TAG occurred more times or was not found: " + tag)
@@ -90,5 +94,14 @@ def replace2(text: str) -> str:
         text = text[:-1]
 
     return text
+
+
+
+if __name__ == "__main__":
+    my_files._write_json(JSON_FILE_NAME, DICTIONARY)
+
+
+
+
 
 

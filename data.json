@@ -1,0 +1,24 @@
+{
+  "TXT_CANNED_MESSAGE_List_Okay_STR_M": "OK",
+  "TXT_CANNED_MESSAGE_Prompt_Okay_STR_M": "OK",
+  "TXT_CANNED_MESSAGE_List_Yes_STR_M": "Ano",
+  "TXT_CANNED_MESSAGE_Prompt_Yes_STR_M": "Ano",
+  "TXT_CANNED_MESSAGE_List_No_STR_M": "Ne",
+  "TXT_CANNED_MESSAGE_Prompt_No_STR_M": "Ne",
+  "TXT_CANNED_MESSAGE_List_Out_Riding_STR_M": "Jsem na kole. Ozvu se později.",
+  "TXT_CANNED_MESSAGE_Prompt_Out_Riding_STR_M": "Jsem na kole. Ozvu se později.",
+  "TXT_CANNED_MESSAGE_List_Be_Home_Soon_STR_M": "Brzy budu doma.",
+  "TXT_CANNED_MESSAGE_Prompt_Be_Home_Soon_STR_M": "Brzy budu doma.",
+  "TXT_CANNED_MESSAGE_List_Cant_Talk_Now_STR_M": "Teď nemůžu mluvit. Ozvu se.",
+  "TXT_CANNED_MESSAGE_Prompt_Cant_Talk_Now_STR_M": "Teď nemůžu mluvit. Ozvu se.",
+  "TXT_CANNED_MESSAGE_List_Busy_At_The_Moment_STR_M": "Za chvíli jsem tam!",
+  "TXT_CANNED_MESSAGE_Prompt_Busy_At_The_Moment_STR_M": "Za chvíli jsem tam!",
+  "TXT_CANNED_MESSAGE_List_Running_Late_STR_M": "Budu mít zpoždění.",
+  "TXT_CANNED_MESSAGE_Prompt_Running_Late_STR_M": "Budu mít zpoždění.",
+  "TXT_CANNED_MESSAGE_List_Almost_There_STR_M": "Dorazím za 20 minut.",
+  "TXT_CANNED_MESSAGE_Prompt_Almost_There_STR_M": "Dorazím za 20 minut.",
+  "TXT_CANNED_MESSAGE_List_Halfway_STR_M": "Dorazím za 30 minut.",
+  "TXT_CANNED_MESSAGE_Prompt_Halfway_STR_M": "Dorazím za 30 minut.",
+
+  "TXT_CANNED_MESSAGE_Signature_STR_M": "Odesláno ze zařízení Garmin"
+}

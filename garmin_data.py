@@ -25,6 +25,45 @@ DICTIONARY = dict(
     TXT_CANNED_MESSAGE_Signature_STR_M="Odesláno ze zařízení Garmin",               # Odesláno z mého zařízení Garmin
 )
 
+
+JSON_FILE_NAME = "config.json"
+LANG_EXTENSION = "gtt"
+
+def json_exist() -> bool:
+    return my_files.exist_file(JSON_FILE_NAME)
+
+def get_lang_file_name() -> str:
+    files = my_files.get_files_with_extension(LANG_EXTENSION)
+    if files:
+        return my_files.get_abs_path(str(files.pop()))
+    else:
+        return ""
+
+def replace(text: str) -> str:
+    json_data = my_files._read_json(JSON_FILE_NAME)
+    DICTIONARY = dict(json_data)
+
+    for tag, txt in DICTIONARY.items():
+        if text.count(tag) != 1:
+            raise ValueError("TAG occurred more times or was not found: " + tag)
+        tag_pos = text.index(tag)
+        start = text.index("<txt>", tag_pos)
+        end = text.index("</txt>", tag_pos)
+        text = text[:start+5] + str(txt) + text[end:]
+
+    # Check if the last char is ENTER. If that you should remove it,
+    # because the row count must be the same like before
+    if text.endswith("\n"):
+        text = text[:-1]
+
+    return text
+
+
+#if __name__ == "__main__":
+#    my_files._write_json(JSON_FILE_NAME, DICTIONARY)
+
+
+'''
 #  Original messages are:
 """OK."""
 """Ano"""
@@ -52,53 +91,29 @@ CHANGE_LIST = [
 # List of texts what don't have to be 2 times in the language file
 EXCEPTION_LIST = \
     ['Odesláno z mého zařízení Garmin']
-
+    
 FILE_NAME = 'Czech.gtt'
-JSON_FILE_NAME = "data.json"
-
-
+    
 def replace_old(text: str) -> str:
-    for i in range(len(CHANGE_LIST)):
-        orig_item = CHANGE_LIST[i][0]
-        replace_item = CHANGE_LIST[i][1]
-        count = text.count(orig_item)
+for i in range(len(CHANGE_LIST)):
+    orig_item = CHANGE_LIST[i][0]
+    replace_item = CHANGE_LIST[i][1]
+    count = text.count(orig_item)
 
-        if count != 2:
-            if not (orig_item in EXCEPTION_LIST) or count != 1:
-                raise ValueError("Can not be find text - " + str(i + 1) + ". " + orig_item)
-        text = text.replace(orig_item, replace_item)
+    if count != 2:
+        if not (orig_item in EXCEPTION_LIST) or count != 1:
+            raise ValueError("Can not be find text - " + str(i + 1) + ". " + orig_item)
+    text = text.replace(orig_item, replace_item)
 
-    # Check if the last char is ENTER. If that you should remove it,
-    # because the row count must be the same like before
-    last_char = text[len(text) - 1:len(text)]
-    if last_char == '\n':
-        text = text[0:len(text) - 1]
+# Check if the last char is ENTER. If that you should remove it,
+# because the row count must be the same like before
+last_char = text[len(text) - 1:len(text)]
+if last_char == '\n':
+    text = text[0:len(text) - 1]
 
-    return text
+return text
 
-
-def replace(text: str) -> str:
-    DICTIONARY = dict(my_files._read_json(JSON_FILE_NAME))
-
-    for tag, txt in DICTIONARY.items():
-        if text.count(tag) != 1:
-            raise ValueError("TAG occurred more times or was not found: " + tag)
-        tag_pos = text.index(tag)
-        start = text.index("<txt>", tag_pos)
-        end = text.index("</txt>", tag_pos)
-        text = text[:start+5] + str(txt) + text[end:]
-
-    # Check if the last char is ENTER. If that you should remove it,
-    # because the row count must be the same like before
-    if text.endswith("\n"):
-        text = text[:-1]
-
-    return text
-
-
-
-if __name__ == "__main__":
-    my_files._write_json(JSON_FILE_NAME, DICTIONARY)
+'''
 
 
 

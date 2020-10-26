@@ -52,6 +52,7 @@ class Ui_MainWindow(object):
         self.lblLogo.setObjectName("lblLogo")
         self.gridLayout.addWidget(self.lblLogo, 0, 0, 1, 1)
         self.psbBrowse = QtWidgets.QPushButton(self.frmMain)
+        self.psbBrowse.setEnabled(True)
         self.psbBrowse.setObjectName("psbBrowse")
         self.gridLayout.addWidget(self.psbBrowse, 5, 0, 1, 1)
         self.txeOutput = QtWidgets.QTextEdit(self.frmMain)
@@ -71,9 +72,21 @@ class Ui_MainWindow(object):
         self.lnePath.setObjectName("lnePath")
         self.gridLayout.addWidget(self.lnePath, 5, 1, 1, 1)
         self.psbStart = QtWidgets.QPushButton(self.frmMain)
+        self.psbStart.setEnabled(True)
         self.psbStart.setMinimumSize(QtCore.QSize(90, 0))
-        self.psbStart.setStyleSheet("background-color: rgb(0, 124, 195);\n"
-"color: rgb(225, 225, 225);")
+        self.psbStart.setAutoFillBackground(False)
+        self.psbStart.setStyleSheet(":enabled {\n"
+" color:  rgb(225, 225, 225);\n"
+"background-color: rgb(0, 124, 195);\n"
+"}\n"
+"\n"
+":disabled {\n"
+" color:  rgb(120, 120, 120);\n"
+" background-color: rgb(204, 204, 204);\n"
+"}")
+        self.psbStart.setAutoDefault(False)
+        self.psbStart.setDefault(False)
+        self.psbStart.setFlat(False)
         self.psbStart.setObjectName("psbStart")
         self.gridLayout.addWidget(self.psbStart, 8, 0, 1, 1)
         spacerItem = QtWidgets.QSpacerItem(100, 5, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)

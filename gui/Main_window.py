@@ -25,7 +25,7 @@ class Main_window(QMainWindow):
 
         self._time_stamp = My_Time(4)
         #self._load_temp_files()
-        self._init_path_file()
+        self._init()
 
         self.ui.psbStart.clicked.connect(self.btnStart_onClick)
         self.ui.psbBrowse.clicked.connect(self.btnBrowse_onClick)
@@ -40,9 +40,16 @@ class Main_window(QMainWindow):
             icon_path = base_path + '\\files\\ico.ico'
             self.setWindowIcon(QIcon(icon_path))"""
 
-    def _init_path_file(self):
-        if my_files.exist_file(garmin_data.FILE_NAME):
-            self.ui.lnePath.setText(my_files.get_abs_path(garmin_data.FILE_NAME))
+    def _init(self):
+        lang_file = garmin_data.get_lang_file_name()
+        if my_files.exist_file(lang_file):
+            self.ui.lnePath.setText(lang_file)
+
+        if not garmin_data.json_exist():
+            self._add_output("ERROR - JSON file doesn't exist")
+            QMessageBox.critical(self, "JSON file error: ", "JSON file " + garmin_data.JSON_FILE_NAME + " doesn't exist!")
+            self.ui.psbStart.setEnabled(False)
+            self.ui.psbBrowse.setEnabled(False)
 
     def btnBrowse_onClick(self):
         file_name, _ = QFileDialog.getOpenFileName(self, "Open File", "", "Garmin Lang Files (*.gtt)")

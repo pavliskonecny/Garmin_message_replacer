@@ -106,6 +106,9 @@
        </item>
        <item row="5" column="0">
         <widget class="QPushButton" name="psbBrowse">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
          <property name="text">
           <string>Browse</string>
          </property>
@@ -155,19 +158,41 @@
        </item>
        <item row="8" column="0">
         <widget class="QPushButton" name="psbStart">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
          <property name="minimumSize">
           <size>
            <width>90</width>
            <height>0</height>
           </size>
          </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(0, 124, 195);
-color: rgb(225, 225, 225);</string>
+          <string notr="true">:enabled {
+ color:  rgb(225, 225, 225);
+background-color: rgb(0, 124, 195);
+}
+
+:disabled {
+ color:  rgb(120, 120, 120);
+ background-color: rgb(204, 204, 204);
+}</string>
          </property>
          <property name="text">
           <string>START
 Conversion</string>
+         </property>
+         <property name="autoDefault">
+          <bool>false</bool>
+         </property>
+         <property name="default">
+          <bool>false</bool>
+         </property>
+         <property name="flat">
+          <bool>false</bool>
          </property>
         </widget>
        </item>

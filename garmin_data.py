@@ -35,7 +35,7 @@ def json_exist() -> bool:
 def get_lang_file_name() -> str:
     files = my_files.get_files_with_extension(LANG_EXTENSION)
     if files:
-        return my_files.get_abs_path(str(files.pop()))
+        return my_files.get_abs_path(str(files[0]))
     else:
         return ""
 

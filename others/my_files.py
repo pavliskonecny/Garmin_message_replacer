@@ -40,13 +40,19 @@ def get_file_name(file_path: str) -> str:
     return os.path.basename(file_path)
 
 
-def get_project_folder_path() -> str:
+def get_project_dir_path() -> str:
     """
     function return absolute project folder path
     """
     # res = str(os.path.abspath(os.curdir))  #by this you will get current FILE folder, not PROJECT folder
     # res = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  #by this you will get path without last folder
     return str(sys.path[1])
+
+def get_cur_dir() -> str:
+    """
+    function return absolute current directory path
+    """
+    return os.curdir
 
 
 #def get_temp_project_folder_path() -> str:
@@ -70,8 +76,7 @@ def get_files_with_extension(extension: str) -> list:
         extension = "." + extension
 
     files = []
-
-    for file in os.listdir(get_project_folder_path()):
+    for file in os.listdir(get_cur_dir()):
         if file.endswith(extension):
             files.append(file)
 

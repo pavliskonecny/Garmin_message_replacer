@@ -9,7 +9,7 @@ add_exe_file_name = True    # False will make exe file name the same like projec
 exe_file_name = "Garmin Lang Replacer"
 
 add_icon = True             # Add exe file icon
-ico_name = "files\\ico.ico"
+ico_name = "images\\ico.ico"
 
 add_folder = False           # Include folder to exe file
 add_folder_name = "files"

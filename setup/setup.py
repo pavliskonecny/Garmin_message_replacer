@@ -11,7 +11,7 @@ exe_file_name = "Garmin Lang Replacer"
 add_icon = True             # Add exe file icon
 ico_name = "files\\ico.ico"
 
-add_folder = True           # Include folder to exe file
+add_folder = False           # Include folder to exe file
 add_folder_name = "files"
 
 gui_app = True              # False will take console app, True will take GUI app

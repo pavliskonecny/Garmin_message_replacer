@@ -48,8 +48,8 @@ def get_project_folder_path() -> str:
     return str(sys.path[1])
 
 
-def get_temp_project_folder_path() -> str:
+#def get_temp_project_folder_path() -> str:
     """
     function return temp absolute project folder path
     """
-    return str(sys._MEIPASS)
+#    return str(sys._MEIPASS)

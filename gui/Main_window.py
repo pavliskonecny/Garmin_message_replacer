@@ -93,8 +93,11 @@ class Main_window(QMainWindow):
             QMessageBox.critical(self, "Unexpected error", "Unexpected error: " + str(ExGlobal))
 
     def _get_save_file_name(self):
-        propose_file_name = "new_" + my_files.get_file_name(self.ui.lnePath.text())
-        file_name, _ = QFileDialog.getSaveFileName(self, "Save File as", propose_file_name, "Garmin Lang Files (*.gtt)")
+        source_file_name = self.ui.lnePath.text()
+        propose_dir_name = my_files.get_dir(source_file_name)
+        propose_file_name = "new_" + my_files.get_file_name(source_file_name)
+        propose_path = propose_dir_name + "\\" + propose_file_name
+        file_name, _ = QFileDialog.getSaveFileName(self, "Save File as", propose_path, "Garmin Lang Files (*.gtt)")
         return file_name
 
     def _add_output(self, new_text: str):

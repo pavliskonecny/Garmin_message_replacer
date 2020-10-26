@@ -24,7 +24,7 @@ DICTIONARY = dict(
     TXT_CANNED_MESSAGE_List_Halfway_STR_M="Dorazím do půl hodiny.",                 # Jste v polovině.
     TXT_CANNED_MESSAGE_Prompt_Halfway_STR_M="Dorazím do půl hodiny.",               # Jste v polovině.
 
-    TXT_CANNED_MESSAGE_Signature_STR_M="-Odesláno z Garminu",                       # Odesláno z mého zařízení Garmin
+    TXT_CANNED_MESSAGE_Signature_STR_M="Odesláno z Garminu",                        # Odesláno z mého zařízení Garmin
 )
 
 
@@ -46,9 +46,6 @@ def replace(text: str) -> str:
     DICTIONARY = dict(json_data)
 
     for tag, txt in DICTIONARY.items():
-        print(str(txt) + ": " + str(len(txt)))
-
-
         if text.count(tag) != 1:
             raise ValueError("TAG occurred more times or was not found: " + tag)
         tag_pos = text.index(tag)

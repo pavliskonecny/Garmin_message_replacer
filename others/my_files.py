@@ -48,17 +48,26 @@ def get_project_dir_path() -> str:
     # res = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  #by this you will get path without last folder
     return str(sys.path[1])
 
+
+def get_dir(file_path: str) -> str:
+    """
+    function return absolute current directory path
+    """
+    return os.path.dirname(file_path)
+
+
 def get_cur_dir() -> str:
     """
     function return absolute current directory path
     """
     return os.curdir
 
-
-#def get_temp_project_folder_path() -> str:
+    # def get_temp_project_folder_path() -> str:
     """
     function return temp absolute project folder path
     """
+
+
 #    return str(sys._MEIPASS)
 
 
@@ -76,6 +85,7 @@ def _read_json(json_file_name: str) -> str:
         return j_data
     except Exception as ex:
         raise SyntaxError("JSON reading error: " + str(ex))
+
 
 def get_files_with_extension(extension: str) -> list:
     if not extension.startswith("."):

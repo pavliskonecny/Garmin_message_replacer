@@ -63,13 +63,19 @@ def get_cur_dir() -> str:
 
 
 def _write_json(json_file_name: str, data: object):
-    j_data = json.dumps(data, ensure_ascii=False, indent=2)
-    write_file(json_file_name, j_data)
+    try:
+        j_data = json.dumps(data, ensure_ascii=False, indent=2)
+        write_file(json_file_name, j_data)
+    except Exception as ex:
+        raise SyntaxError("JSON writing error: " + str(ex))
 
 
 def _read_json(json_file_name: str) -> str:
-    j_data = json.loads(read_file(json_file_name))
-    return j_data
+    try:
+        j_data = json.loads(read_file(json_file_name))
+        return j_data
+    except Exception as ex:
+        raise SyntaxError("JSON reading error: " + str(ex))
 
 def get_files_with_extension(extension: str) -> list:
     if not extension.startswith("."):

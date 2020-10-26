@@ -4,5 +4,6 @@
   </qresource>
   <qresource prefix="icons">
     <file>../images/garmin.png</file>
+    <file>../images/info.png</file>
   </qresource>
 </RCC>

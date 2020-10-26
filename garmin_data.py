@@ -1,4 +1,6 @@
 from others import my_files
+# maximum chars per message is 43.
+# my signature is 19 characters. Message can be till 24 chars long.
 
 DICTIONARY = dict(
     TXT_CANNED_MESSAGE_List_Okay_STR_M="OK",                                        # OK.
@@ -7,22 +9,22 @@ DICTIONARY = dict(
     TXT_CANNED_MESSAGE_Prompt_Yes_STR_M="Ano",                                      # Ano
     TXT_CANNED_MESSAGE_List_No_STR_M="Ne",                                          # Ne
     TXT_CANNED_MESSAGE_Prompt_No_STR_M="Ne",                                        # Ne
-    TXT_CANNED_MESSAGE_List_Out_Riding_STR_M="Jsem na kole. Ozvu se později.",      # Jezdím.
-    TXT_CANNED_MESSAGE_Prompt_Out_Riding_STR_M="Jsem na kole. Ozvu se později.",    # Jezdím.
+    TXT_CANNED_MESSAGE_List_Out_Riding_STR_M="Jsem na kole. Ozvu se.",              # Jezdím.
+    TXT_CANNED_MESSAGE_Prompt_Out_Riding_STR_M="Jsem na kole. Ozvu se.",            # Jezdím.
     TXT_CANNED_MESSAGE_List_Be_Home_Soon_STR_M="Brzy budu doma.",                   # Brzy budu doma.
-    TXT_CANNED_MESSAGE_Prompt_Be_Home_Soon_STR_M="Brzy budu doma.",                  # Brzy budu doma.
-    TXT_CANNED_MESSAGE_List_Cant_Talk_Now_STR_M="Teď nemůžu mluvit. Ozvu se.",      # Teď nemůžu mluvit.
-    TXT_CANNED_MESSAGE_Prompt_Cant_Talk_Now_STR_M="Teď nemůžu mluvit. Ozvu se.",    # Teď nemůžu mluvit.
-    TXT_CANNED_MESSAGE_List_Busy_At_The_Moment_STR_M="Za chvíli jsem tam!",         # Teď nemůžu.
-    TXT_CANNED_MESSAGE_Prompt_Busy_At_The_Moment_STR_M="Za chvíli jsem tam!",       # Teď nemůžu.
-    TXT_CANNED_MESSAGE_List_Running_Late_STR_M="Budu mít zpoždění.",                # Se zpožděním.
-    TXT_CANNED_MESSAGE_Prompt_Running_Late_STR_M="Budu mít zpoždění.",              # Se zpožděním.
-    TXT_CANNED_MESSAGE_List_Almost_There_STR_M="Dorazím za 20 minut.",              # Téměř u cíle.
-    TXT_CANNED_MESSAGE_Prompt_Almost_There_STR_M="Dorazím za 20 minut.",            # Téměř u cíle.
-    TXT_CANNED_MESSAGE_List_Halfway_STR_M="Dorazím za 30 minut.",                   # Jste v polovině.
-    TXT_CANNED_MESSAGE_Prompt_Halfway_STR_M="Dorazím za 30 minut.",                 # Jste v polovině.
+    TXT_CANNED_MESSAGE_Prompt_Be_Home_Soon_STR_M="Brzy budu doma.",                 # Brzy budu doma.
+    TXT_CANNED_MESSAGE_List_Cant_Talk_Now_STR_M="Teď nemůžu. Ozvu se.",             # Teď nemůžu mluvit.
+    TXT_CANNED_MESSAGE_Prompt_Cant_Talk_Now_STR_M="Teď nemůžu. Ozvu se.",           # Teď nemůžu mluvit.
+    TXT_CANNED_MESSAGE_List_Busy_At_The_Moment_STR_M="Můžu psát jen ANO/NE.",       # Teď nemůžu.
+    TXT_CANNED_MESSAGE_Prompt_Busy_At_The_Moment_STR_M="Můžu psát jen ANO/NE.",     # Teď nemůžu.
+    TXT_CANNED_MESSAGE_List_Running_Late_STR_M="Mám menší zpoždění.",               # Se zpožděním.
+    TXT_CANNED_MESSAGE_Prompt_Running_Late_STR_M="Mám menší zpoždění.",             # Se zpožděním.
+    TXT_CANNED_MESSAGE_List_Almost_There_STR_M="Za chvíli jsem tam!",               # Téměř u cíle.
+    TXT_CANNED_MESSAGE_Prompt_Almost_There_STR_M="Za chvíli jsem tam!",             # Téměř u cíle.
+    TXT_CANNED_MESSAGE_List_Halfway_STR_M="Dorazím do půl hodiny.",                 # Jste v polovině.
+    TXT_CANNED_MESSAGE_Prompt_Halfway_STR_M="Dorazím do půl hodiny.",               # Jste v polovině.
 
-    TXT_CANNED_MESSAGE_Signature_STR_M="Odesláno ze zařízení Garmin",               # Odesláno z mého zařízení Garmin
+    TXT_CANNED_MESSAGE_Signature_STR_M="-Odesláno z Garminu",                       # Odesláno z mého zařízení Garmin
 )
 
 
@@ -44,6 +46,9 @@ def replace(text: str) -> str:
     DICTIONARY = dict(json_data)
 
     for tag, txt in DICTIONARY.items():
+        print(str(txt) + ": " + str(len(txt)))
+
+
         if text.count(tag) != 1:
             raise ValueError("TAG occurred more times or was not found: " + tag)
         tag_pos = text.index(tag)
@@ -59,8 +64,9 @@ def replace(text: str) -> str:
     return text
 
 
-#if __name__ == "__main__":
-#    my_files._write_json(JSON_FILE_NAME, DICTIONARY)
+if __name__ == "__main__":
+    print("writing JSON")
+    my_files._write_json(JSON_FILE_NAME, DICTIONARY)
 
 
 '''

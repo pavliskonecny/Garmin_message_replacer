@@ -29,6 +29,7 @@ class Main_window(QMainWindow):
 
         self.ui.psbStart.clicked.connect(self.btnStart_onClick)
         self.ui.psbBrowse.clicked.connect(self.btnBrowse_onClick)
+        self.ui.psbAbout.clicked.connect(self.actAbout_onClick)
 
     """def _load_temp_files(self):
         base_path = ""
@@ -50,6 +51,9 @@ class Main_window(QMainWindow):
             QMessageBox.critical(self, "JSON file error: ", "JSON file " + garmin_data.JSON_FILE_NAME + " doesn't exist!")
             self.ui.psbStart.setEnabled(False)
             self.ui.psbBrowse.setEnabled(False)
+
+    def actAbout_onClick(self):
+        QMessageBox.about(self, "About", "Created by:\n" "Pavel Konečný\n" "Czech Republic\n" "2020")
 
     def btnBrowse_onClick(self):
         file_name, _ = QFileDialog.getOpenFileName(self, "Open File", "", "Garmin Lang Files (*.gtt)")
@@ -81,6 +85,9 @@ class Main_window(QMainWindow):
             self._add_output("ERROR")
             QMessageBox.information(self, "File doesn't exist",
                                     "Please, as first select Garmin Language file\n" + str(ExFileNotFound))
+        except SyntaxError as ExSynEee:
+            self._add_output("ERROR")
+            QMessageBox.critical(self, "Syntax error: ", str(ExSynEee))
         except Exception as ExGlobal:
             self._add_output("ERROR")
             QMessageBox.critical(self, "Unexpected error", "Unexpected error: " + str(ExGlobal))

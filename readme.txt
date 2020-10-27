@@ -23,15 +23,15 @@ In text editor open the configuration file "config.json" which is important part
 Inside you can find tags <TAG> and corresponding texts <TXT>.
 The configuration file "config.json" is like a template for replacing text messages.
 So edit the file as you need.
-In case that Garmin release update and make language file as original, simply run the application:
+In case that Garmin release update and make language file as default, simply run the application:
 1. Open the language file *.gtt
 2. Click on START button (it will start replacing texts according to template "config.json")
-3. Save new (edited) language file.
-4. This edited file copy to origin place in Garmin device
+3. Save new (edited) language file
+4. This new (edited) file you have to copy to origin place in Garmin device
 
 DON'T FORGET to make a backup before replacing original file
-It was tested with device Garmin Edge530 and Windows 10.
 Use of this program is on your own risk!
+It was tested with device Garmin Edge530 and Windows 10.
 Enjoy!
 
 **********************************************************************************************************************************************
@@ -68,6 +68,6 @@ Pokud Garmin udela update, jednoduse spuste program:
 4. Tento nove ulozeny soubor nahrajte na puvodni misto v zarizeni Garmin
 
 NEZAPOMENTE PROVEST ZALOHU!
-Testovano na zarizeni Edge530 a Windows 10.
 Pouziti je pouze na vasi vlastni zodpovednost!
+Testovano na zarizeni Edge530 a Windows 10.
 At se libi!

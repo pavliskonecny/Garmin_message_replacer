@@ -31,6 +31,8 @@ In case that Garmin release update and make language file as default, simply run
 
 DON'T FORGET to make a backup before replacing original file
 Use of this program is on your own risk!
+In my case I found that maximum length of message can be 43 characters.
+If you use "signature" as "send from my Garmin" the max length of message will be shorter about.
 It was tested with device Garmin Edge530 and Windows 10.
 Enjoy!
 
@@ -69,5 +71,7 @@ Pokud Garmin udela update, jednoduse spuste program:
 
 NEZAPOMENTE PROVEST ZALOHU!
 Pouziti je pouze na vasi vlastni zodpovednost!
+V mem pripade jsem zjistil, ze maximalni delka zpravy je 43 znaku.
+Pokud pouzivate "podpis zarizenim" jako "Odeslano ze zarizeni Garmin" bude maximalni delka zpravy o to kratsi.
 Testovano na zarizeni Edge530 a Windows 10.
 At se libi!

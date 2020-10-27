@@ -6,7 +6,7 @@ import sys
 py_file_name = 'main.py'
 
 add_exe_file_name = True    # False will make exe file name the same like project name folder
-exe_file_name = "Garmin Lang Replacer"
+exe_file_name = "Garmin message replacer"
 
 add_icon = True             # Add exe file icon
 ico_name = "images\\ico.ico"

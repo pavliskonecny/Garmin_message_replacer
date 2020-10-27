@@ -7,7 +7,6 @@ pyrcc5 gui/resources.qrc -o gui/resources_rc.py
 """
 
 from PyQt5.QtWidgets import QMainWindow, QFileDialog, QMessageBox
-#from PyQt5.QtGui import QIcon
 from gui.Ui_MainWindow import Ui_MainWindow
 
 import others.my_files as my_files
@@ -24,22 +23,11 @@ class Main_window(QMainWindow):
         self.show()
 
         self._time_stamp = My_Time(4)
-        #self._load_temp_files()
         self._init()
 
         self.ui.psbStart.clicked.connect(self.btnStart_onClick)
         self.ui.psbBrowse.clicked.connect(self.btnBrowse_onClick)
         self.ui.psbAbout.clicked.connect(self.actAbout_onClick)
-
-    """def _load_temp_files(self):
-        base_path = ""
-        try:
-            base_path = my_files.get_temp_project_folder_path()
-        except Exception:
-            base_path = my_files.get_project_folder_path()
-        finally:
-            icon_path = base_path + '\\files\\ico.ico'
-            self.setWindowIcon(QIcon(icon_path))"""
 
     def _init(self):
         lang_file = garmin_data.get_lang_file_name()

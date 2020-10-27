@@ -17,7 +17,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Garmin language message replacer 1.0</string>
+   <string>Garmin message replacer 1.0</string>
   </property>
   <property name="windowIcon">
    <iconset resource="resources.qrc">
@@ -110,7 +110,7 @@ background-color: rgb(0, 124, 195);
          </property>
          <property name="text">
           <string>START
-Conversion</string>
+replacing</string>
          </property>
          <property name="autoDefault">
           <bool>false</bool>
@@ -161,7 +161,7 @@ Conversion</string>
           <bool>true</bool>
          </property>
          <property name="text">
-          <string>Browse</string>
+          <string>Browse ...</string>
          </property>
         </widget>
        </item>

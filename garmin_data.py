@@ -1,6 +1,6 @@
 from others import my_files
 # maximum chars per message is 43.
-# my signature is 19 characters. Message can be till 24 chars long.
+# my signature is 19 characters. So message can be till 24 chars long.
 
 DICTIONARY = dict(
     TXT_CANNED_MESSAGE_List_Okay_STR_M="OK",                                        # OK.
@@ -64,62 +64,3 @@ def replace(text: str) -> str:
 if __name__ == "__main__":
     print("writing JSON")
     my_files._write_json(JSON_FILE_NAME, DICTIONARY)
-
-
-'''
-#  Original messages are:
-"""OK."""
-"""Ano"""
-"""Ne"""
-"""Jezdím."""
-"""Brzy budu doma."""
-"""Teď nemůžu mluvit."""
-"""Teď nemůžu."""
-"""Se zpožděním."""
-"""Téměř u cíle."""
-"""Jste v polovině."""
-
-# First column are original texts, second column are replaced texts
-CHANGE_LIST = [
-    ['OK.', 'OK'],  # ...it can be not safety, because it can be many times inside the file.
-    ['Jezdím.', 'Jsem na kole. Ozvu se později.'],
-    ['Teď nemůžu mluvit.', 'Teď nemůžu mluvit. Ozvu se.'],
-    ['Teď nemůžu.', 'Za chvíli jsem tam!'],
-    ['Se zpožděním.', 'Budu mít zpoždění.'],
-    ['Téměř u cíle.', 'Dorazím za 20 minut.'],
-    ['Jste v polovině.', 'Dorazím za 30 minut.'],
-    ['Odesláno z mého zařízení Garmin', 'Odesláno ze zařízení Garmin']
-]
-
-# List of texts what don't have to be 2 times in the language file
-EXCEPTION_LIST = \
-    ['Odesláno z mého zařízení Garmin']
-    
-FILE_NAME = 'Czech.gtt'
-    
-def replace_old(text: str) -> str:
-for i in range(len(CHANGE_LIST)):
-    orig_item = CHANGE_LIST[i][0]
-    replace_item = CHANGE_LIST[i][1]
-    count = text.count(orig_item)
-
-    if count != 2:
-        if not (orig_item in EXCEPTION_LIST) or count != 1:
-            raise ValueError("Can not be find text - " + str(i + 1) + ". " + orig_item)
-    text = text.replace(orig_item, replace_item)
-
-# Check if the last char is ENTER. If that you should remove it,
-# because the row count must be the same like before
-last_char = text[len(text) - 1:len(text)]
-if last_char == '\n':
-    text = text[0:len(text) - 1]
-
-return text
-
-'''
-
-
-
-
-
-

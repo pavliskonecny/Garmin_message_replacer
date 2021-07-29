@@ -30,9 +30,9 @@ class Main_window(QMainWindow):
         self.ui.psbAbout.clicked.connect(self.actAbout_onClick)
 
     def _init(self):
-        lang_file = garmin_data.get_lang_file_name()
-        if my_files.exist_file(lang_file):
-            self.ui.lnePath.setText(lang_file)
+        lang_file_path = garmin_data.get_lang_file_name()
+        if my_files.exist_file(lang_file_path):
+            self.ui.lnePath.setText(lang_file_path)
 
         if not garmin_data.json_exist():
             self._add_output("ERROR - JSON file doesn't exist")
@@ -44,27 +44,40 @@ class Main_window(QMainWindow):
         QMessageBox.about(self, "About", "Created by:\n" "Pavel Konečný\n" "Czech Republic\n" "2020")
 
     def btnBrowse_onClick(self):
-        file_name, _ = QFileDialog.getOpenFileName(self, "Open File", "", "Garmin Lang Files (*.gtt)")
-        if file_name:
-            self.ui.lnePath.setText(file_name)
+        file_name_path, _ = QFileDialog.getOpenFileName(self, "Open File", "", "Garmin Lang Files (*.gtt)")
+        if file_name_path:
+            self.ui.lnePath.setText(file_name_path)
 
     def btnStart_onClick(self):
         try:
             self._add_output("**** START *****")
+
             self._add_output("Reading file ..... ")
+            source_file_path = self.ui.lnePath.text()
+            source_text = my_files.read_file(source_file_path)
 
-            source_file_name = self.ui.lnePath.text()
-            source_text = my_files.read_file(source_file_name)
-
-            self._add_output("Replacing ..... ")
+            self._add_output("Replacing messages ..... ")
             target_text = garmin_data.replace(source_text)
 
+            if self.ui.chcbBackup.isChecked():
+                self._add_output("Creating backup ..... ")
+                backup_dir = "backup_languages"
+                today = My_Time.today()
+                source_file_path = self.ui.lnePath.text()
+                file_name = my_files.get_file_name(source_file_path)
+                my_files.make_dir(backup_dir)
+                my_files.make_dir(f"{backup_dir}\\{today}")
+                my_files.copy_file(source_file_path, f"{backup_dir}\\{today}\\{file_name}")
+
             self._add_output("Writing file ..... ")
-            target_file_name = self._get_save_file_name()
-            if not target_file_name:
+            if self.ui.chcbOverwrite.isChecked():
+                target_file_path = self.ui.lnePath.text()
+            else:
+                target_file_path = self._get_save_file_path()
+            if not target_file_path:
                 self._add_output("**** FILE SAVING INTERRUPT BY USER *****")
             else:
-                my_files.write_file(target_file_name, target_text)
+                my_files.write_file(target_file_path, target_text)
                 self._add_output("**** DONE *****")
         except ValueError as ExValErr:
             self._add_output("ERROR")
@@ -80,12 +93,12 @@ class Main_window(QMainWindow):
             self._add_output("ERROR")
             QMessageBox.critical(self, "Unexpected error", "Unexpected error: " + str(ExGlobal))
 
-    def _get_save_file_name(self):
-        source_file_name = self.ui.lnePath.text()
+    def _get_save_file_path(self):
+        source_file_path = self.ui.lnePath.text()
         #propose_dir_name = my_files.get_dir(source_file_name)
         #propose_file_name = "new_" + my_files.get_file_name(source_file_name)
         #propose_path = propose_dir_name + "\\" + propose_file_name
-        file_name, _ = QFileDialog.getSaveFileName(self, "Save File as", source_file_name, "Garmin Lang Files (*.gtt)")
+        file_name, _ = QFileDialog.getSaveFileName(self, "Save File as", source_file_path, "Garmin Lang Files (*.gtt)")
         return file_name
 
     def _add_output(self, new_text: str):

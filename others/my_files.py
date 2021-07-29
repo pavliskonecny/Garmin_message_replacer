@@ -1,6 +1,7 @@
 import os
 import sys
 import json
+from shutil import copyfile
 
 
 def read_file(f_name: str) -> str:
@@ -18,6 +19,9 @@ def write_file(f_name: str, text: str):
     with open(f_name, mode='w', encoding='utf-8', newline='') as file:
         print(text, file=file)
 
+def copy_file(source_path: str, destination_path: str):
+    # destination folders have to exist as first!!!
+    copyfile(source_path, destination_path)
 
 def exist_file(file_name: str) -> bool:
     """
@@ -25,6 +29,11 @@ def exist_file(file_name: str) -> bool:
     """
     return os.path.isfile(file_name)
 
+def exist_dir(directory_name: str) -> bool:
+    """
+    function return bool of existing directory
+    """
+    return os.path.isdir(directory_name)
 
 def get_abs_path(file_name: str) -> str:
     """
@@ -63,12 +72,17 @@ def get_cur_dir() -> str:
     return os.curdir
 
     # def get_temp_project_folder_path() -> str:
-    """
-    function return temp absolute project folder path
-    """
+    # """
+    # function return temp absolute project folder path
+    # """
+    # return str(sys._MEIPASS)
 
-
-#    return str(sys._MEIPASS)
+def make_dir(directory_name: str):
+    """
+    function create directory if it doesn't exist
+    """
+    if not exist_dir(directory_name):
+        os.mkdir(directory_name)
 
 
 def _write_json(json_file_name: str, data: object):

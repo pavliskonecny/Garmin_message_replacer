@@ -30,11 +30,16 @@ DICTIONARY = dict(
 
 JSON_FILE_NAME = "config.json"
 LANG_EXTENSION = "gtt"
+LANG_FILE = "E:\\Garmin\\Text\\Czech.gtt"
 
 def json_exist() -> bool:
     return my_files.exist_file(JSON_FILE_NAME)
 
 def get_lang_file_name() -> str:
+    # return predefined file if exist
+    if my_files.exist_file(LANG_FILE):
+        return LANG_FILE
+    # otherwise return first occurrence of *.gtt file
     files = my_files.get_files_with_extension(LANG_EXTENSION)
     if files:
         return my_files.get_abs_path(str(files[0]))

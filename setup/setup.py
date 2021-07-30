@@ -71,7 +71,8 @@ def open_folder():
 
 
 # ******* START *********
-print("Start building ...")
-make_build()
-print("Build is DONE")
-open_folder()
+if __name__ == "__main__":
+    print("Start building ...")
+    make_build()
+    print("Build is DONE")
+    open_folder()

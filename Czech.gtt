@@ -1456,7 +1456,7 @@
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_List_Almost_There_STR_M</tag>
-        <txt>Téměř u cíle.</txt>
+        <txt>Za chvíli jsem tam!</txt>
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_List_Be_Home_Soon_STR_M</tag>
@@ -1468,7 +1468,7 @@
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_List_Busy_At_The_Moment_STR_M</tag>
-        <txt>Teď nemůžu.</txt>
+        <txt>Můžu psát jen ANO/NE.</txt>
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_List_Call_Me_STR_M</tag>
@@ -1480,7 +1480,7 @@
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_List_Cant_Talk_Now_STR_M</tag>
-        <txt>Teď nemůžu mluvit.</txt>
+        <txt>Teď nemůžu. Ozvu se.</txt>
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_List_Disregard_Last_Message_STR_M</tag>
@@ -1500,7 +1500,7 @@
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_List_Halfway_STR_M</tag>
-        <txt>Jste v polovině.</txt>
+        <txt>Dorazím do půl hodiny.</txt>
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_List_Heading_Home_STR_M</tag>
@@ -1532,15 +1532,15 @@
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_List_Okay_STR_M</tag>
-        <txt>OK.</txt>
+        <txt>OK</txt>
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_List_Out_Riding_STR_M</tag>
-        <txt>Jezdím.</txt>
+        <txt>Jsem na kole. Ozvu se.</txt>
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_List_Running_Late_STR_M</tag>
-        <txt>Se zpožděním.</txt>
+        <txt>Mám menší zpoždění.</txt>
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_List_See_You_Later_STR_M</tag>
@@ -1576,7 +1576,7 @@
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_Prompt_Almost_There_STR_M</tag>
-        <txt>Téměř u cíle.</txt>
+        <txt>Za chvíli jsem tam!</txt>
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_Prompt_Be_Home_Soon_STR_M</tag>
@@ -1588,7 +1588,7 @@
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_Prompt_Busy_At_The_Moment_STR_M</tag>
-        <txt>Teď nemůžu.</txt>
+        <txt>Můžu psát jen ANO/NE.</txt>
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_Prompt_Call_Me_STR_M</tag>
@@ -1600,7 +1600,7 @@
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_Prompt_Cant_Talk_Now_STR_M</tag>
-        <txt>Teď nemůžu mluvit.</txt>
+        <txt>Teď nemůžu. Ozvu se.</txt>
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_Prompt_Disregard_Last_Message_STR_M</tag>
@@ -1620,7 +1620,7 @@
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_Prompt_Halfway_STR_M</tag>
-        <txt>Jste v polovině.</txt>
+        <txt>Dorazím do půl hodiny.</txt>
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_Prompt_Heading_Home_STR_M</tag>
@@ -1652,15 +1652,15 @@
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_Prompt_Okay_STR_M</tag>
-        <txt>OK.</txt>
+        <txt>OK</txt>
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_Prompt_Out_Riding_STR_M</tag>
-        <txt>Jezdím.</txt>
+        <txt>Jsem na kole. Ozvu se.</txt>
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_Prompt_Running_Late_STR_M</tag>
-        <txt>Se zpožděním.</txt>
+        <txt>Mám menší zpoždění.</txt>
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_Prompt_See_You_Later_STR_M</tag>
@@ -1684,7 +1684,7 @@
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_Signature_STR_M</tag>
-        <txt>Odesláno z mého zařízení Garmin</txt>
+        <txt>Odesláno z Garminu</txt>
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_Title_Send_Message_STR_M</tag>

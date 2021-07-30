@@ -77,12 +77,14 @@ def get_cur_dir() -> str:
     # """
     # return str(sys._MEIPASS)
 
-def make_dir(directory_name: str):
+def make_dir(directory_name: str) -> bool:
     """
     function create directory if it doesn't exist
     """
     if not exist_dir(directory_name):
         os.mkdir(directory_name)
+        return True
+    return False
 
 
 def _write_json(json_file_name: str, data: object):

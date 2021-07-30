@@ -61,7 +61,7 @@ class Main_window(QMainWindow):
 
             if self.ui.chcbBackup.isChecked():
                 self._add_output("Creating backup ..... ")
-                backup_dir = "backup_languages"
+                backup_dir = "backup"
                 today = My_Time.today()
                 source_file_path = self.ui.lnePath.text()
                 file_name = my_files.get_file_name(source_file_path)

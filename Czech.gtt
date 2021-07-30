@@ -8,7 +8,7 @@
         <sort>0</sort>
         <cpage>Czech</cpage>
         <pnum>006-D7340-11</pnum>
-        <ver>1.80</ver>
+        <ver>2.00</ver>
         <upperkbrd>A</upperkbrd>
         <lowerkbrd>a</lowerkbrd>
         <maplang>a</maplang>
@@ -261,6 +261,18 @@
     <str>
         <tag>TXT_ALERTS_BATTERY_SAVE_MODE_Turn_Guidance_STR_S</tag>
         <txt>Průvodce odbočováním</txt>
+    </str>
+    <str>
+        <tag>TXT_APP_SWITCH_Always_STR_M</tag>
+        <txt>Vždy</txt>
+    </str>
+    <str>
+        <tag>TXT_APP_SWITCH_Just_This_Once_STR_M</tag>
+        <txt>Jen tentokrát</txt>
+    </str>
+    <str>
+        <tag>TXT_APP_SWITCH_No_STR_M</tag>
+        <txt>Ne</txt>
     </str>
     <str>
         <tag>TXT_APR_STR</tag>
@@ -760,7 +772,7 @@
     </str>
     <str>
         <tag>TXT_Auto_Zoom_STR_M</tag>
-        <txt>Aut měřítko</txt>
+        <txt>Aut. měřítko</txt>
     </str>
     <str>
         <tag>TXT_Automatic_STR_M</tag>
@@ -819,16 +831,20 @@
         <txt>Začátek</txt>
     </str>
     <str>
+        <tag>TXT_BIC_PHONE_PAIR_Activity_Profiles_Received_STR_M</tag>
+        <txt>Profily aktivit byly přijaty.</txt>
+    </str>
+    <str>
+        <tag>TXT_BIC_PHONE_PAIR_Activity_Profiles_and_Sensors_Received_STR_M</tag>
+        <txt>Profily aktivit a snímače byly přijaty.</txt>
+    </str>
+    <str>
         <tag>TXT_BIC_PHONE_PAIR_Continue_Button_STR_M</tag>
         <txt>Pokračovat</txt>
     </str>
     <str>
         <tag>TXT_BIC_PHONE_PAIR_GCM_Download_Instructions_STR_M</tag>
         <txt>Stáhněte a otevřete si aplikaci Garmin Connect Mobile, která spáruje váš telefon a automaticky synchronizuje osobní statistiku a data o jízdě.</txt>
-    </str>
-    <str>
-        <tag>TXT_BIC_PHONE_PAIR_Garmin_Connect_Mobile_Setup_Complete_STR_M</tag>
-        <txt>Stažení aplikace Garmin Connect Mobile dokončeno</txt>
     </str>
     <str>
         <tag>TXT_BIC_PHONE_PAIR_Garmin_Connect_Mobile_Setup_Failed_STR_M</tag>
@@ -847,6 +863,10 @@
         <txt>Čekání na telefon.</txt>
     </str>
     <str>
+        <tag>TXT_BIC_PHONE_PAIR_Phone_Setup_First_Sync_STR_M</tag>
+        <txt>První synchronizace může trvat několik minut, ale vyplatí se počkat.</txt>
+    </str>
+    <str>
         <tag>TXT_BIC_PHONE_PAIR_Phone_Setup_Instructions_1_STR_M</tag>
         <txt>Chcete-li synchr. uživat. nastavení, ukončete nejprve průvodce nastav. v mobilní aplikaci.</txt>
     </str>
@@ -859,8 +879,28 @@
         <txt>Nastavení telefonu</txt>
     </str>
     <str>
+        <tag>TXT_BIC_PHONE_PAIR_Phone_Setup_Sync_Failed_STR_M</tag>
+        <txt>Během synchronizace došlo k chybě; vaše údaje se nepodařilo načíst.</txt>
+    </str>
+    <str>
+        <tag>TXT_BIC_PHONE_PAIR_Sensors_Received_STR_M</tag>
+        <txt>Snímače byly přijaty.</txt>
+    </str>
+    <str>
+        <tag>TXT_BIC_PHONE_PAIR_Setup_Complete_STR_T</tag>
+        <txt>Nastavení telefonu dokončeno</txt>
+    </str>
+    <str>
         <tag>TXT_BIC_PHONE_PAIR_Skip_Button_STR_M</tag>
         <txt>Přeskočit</txt>
+    </str>
+    <str>
+        <tag>TXT_BIC_PHONE_PAIR_Sync_Failed_STR_T</tag>
+        <txt>Synchronizace se nezdařila</txt>
+    </str>
+    <str>
+        <tag>TXT_BIC_PHONE_PAIR_Sync_In_Progress_STR_T</tag>
+        <txt>Probíhá synchronizace</txt>
     </str>
     <str>
         <tag>TXT_BIKE_LIGHT_Auto_STR_M</tag>
@@ -948,11 +988,11 @@
     </str>
     <str>
         <tag>TXT_BPM_STR_M</tag>
-        <txt>Tepy za minutu</txt>
+        <txt>Tepů za minutu</txt>
     </str>
     <str>
         <tag>TXT_BPM_STR_T</tag>
-        <txt>Tepy za minutu</txt>
+        <txt>Tepů za minutu</txt>
     </str>
     <str>
         <tag>TXT_BTM_Unknown_Device_STR_M</tag>
@@ -1456,7 +1496,7 @@
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_List_Almost_There_STR_M</tag>
-        <txt>Za chvíli jsem tam!</txt>
+        <txt>Téměř u cíle.</txt>
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_List_Be_Home_Soon_STR_M</tag>
@@ -1468,7 +1508,7 @@
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_List_Busy_At_The_Moment_STR_M</tag>
-        <txt>Můžu psát jen ANO/NE.</txt>
+        <txt>Teď nemůžu.</txt>
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_List_Call_Me_STR_M</tag>
@@ -1480,7 +1520,7 @@
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_List_Cant_Talk_Now_STR_M</tag>
-        <txt>Teď nemůžu. Ozvu se.</txt>
+        <txt>Teď nemůžu mluvit.</txt>
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_List_Disregard_Last_Message_STR_M</tag>
@@ -1500,7 +1540,7 @@
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_List_Halfway_STR_M</tag>
-        <txt>Dorazím do půl hodiny.</txt>
+        <txt>Jsem v polovině.</txt>
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_List_Heading_Home_STR_M</tag>
@@ -1532,15 +1572,15 @@
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_List_Okay_STR_M</tag>
-        <txt>OK</txt>
+        <txt>OK.</txt>
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_List_Out_Riding_STR_M</tag>
-        <txt>Jsem na kole. Ozvu se.</txt>
+        <txt>Jezdím.</txt>
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_List_Running_Late_STR_M</tag>
-        <txt>Mám menší zpoždění.</txt>
+        <txt>Se zpožděním.</txt>
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_List_See_You_Later_STR_M</tag>
@@ -1576,7 +1616,7 @@
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_Prompt_Almost_There_STR_M</tag>
-        <txt>Za chvíli jsem tam!</txt>
+        <txt>Téměř u cíle.</txt>
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_Prompt_Be_Home_Soon_STR_M</tag>
@@ -1588,7 +1628,7 @@
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_Prompt_Busy_At_The_Moment_STR_M</tag>
-        <txt>Můžu psát jen ANO/NE.</txt>
+        <txt>Teď nemůžu.</txt>
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_Prompt_Call_Me_STR_M</tag>
@@ -1600,7 +1640,7 @@
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_Prompt_Cant_Talk_Now_STR_M</tag>
-        <txt>Teď nemůžu. Ozvu se.</txt>
+        <txt>Teď nemůžu mluvit.</txt>
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_Prompt_Disregard_Last_Message_STR_M</tag>
@@ -1620,7 +1660,7 @@
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_Prompt_Halfway_STR_M</tag>
-        <txt>Dorazím do půl hodiny.</txt>
+        <txt>Jsem v polovině.</txt>
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_Prompt_Heading_Home_STR_M</tag>
@@ -1652,15 +1692,15 @@
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_Prompt_Okay_STR_M</tag>
-        <txt>OK</txt>
+        <txt>OK.</txt>
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_Prompt_Out_Riding_STR_M</tag>
-        <txt>Jsem na kole. Ozvu se.</txt>
+        <txt>Jezdím.</txt>
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_Prompt_Running_Late_STR_M</tag>
-        <txt>Mám menší zpoždění.</txt>
+        <txt>Se zpožděním.</txt>
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_Prompt_See_You_Later_STR_M</tag>
@@ -1684,7 +1724,7 @@
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_Signature_STR_M</tag>
-        <txt>Odesláno z Garminu</txt>
+        <txt>Odesláno z mého zařízení Garmin</txt>
     </str>
     <str>
         <tag>TXT_CANNED_MESSAGE_Title_Send_Message_STR_M</tag>
@@ -2995,6 +3035,10 @@
         <txt>Směr pohybu</txt>
     </str>
     <str>
+        <tag>TXT_Cnfg_List_Trainer_Mode_Value_STR_M</tag>
+        <txt>Hodnota rež. trenažéru</txt>
+    </str>
+    <str>
         <tag>TXT_Cnfg_List_Trainer_Resistance_STR_M</tag>
         <txt>Odpor trenažéru</txt>
     </str>
@@ -3052,7 +3096,7 @@
     </str>
     <str>
         <tag>TXT_Cnfg_List_Workout_Step_Time_STR_M</tag>
-        <txt>Čas úseku</txt>
+        <txt>Čas kroku</txt>
     </str>
     <str>
         <tag>TXT_Cnfg_List_Workout_Target_STR_M</tag>
@@ -3844,7 +3888,7 @@
     </str>
     <str>
         <tag>TXT_Cnfg_Title_Workout_Step_Time_STR_M</tag>
-        <txt>Čas úseku</txt>
+        <txt>Čas kroku</txt>
     </str>
     <str>
         <tag>TXT_Cnfg_Title_Workout_Target_STR_M</tag>
@@ -4051,6 +4095,10 @@
         <txt>Zmeškaná oznámení</txt>
     </str>
     <str>
+        <tag>TXT_Contextual_Menu_Mode_STR_S</tag>
+        <txt>Režim trenažéru</txt>
+    </str>
+    <str>
         <tag>TXT_Contextual_Menu_Navigation_STR_S</tag>
         <txt>Navigace</txt>
     </str>
@@ -4081,6 +4129,10 @@
     <str>
         <tag>TXT_Contextual_Menu_Ride_Type_STR_S</tag>
         <txt>Typ jízdy</txt>
+    </str>
+    <str>
+        <tag>TXT_Contextual_Menu_Road_Feel_STR_S</tag>
+        <txt>Povrch cesty</txt>
     </str>
     <str>
         <tag>TXT_Contextual_Menu_Save_My_Location_STR_M</tag>
@@ -4117,6 +4169,10 @@
     <str>
         <tag>TXT_Contextual_Menu_Settings_STR_S</tag>
         <txt>Nastavení</txt>
+    </str>
+    <str>
+        <tag>TXT_Contextual_Menu_Start_Livetrack_STR_S</tag>
+        <txt>Spustit LiveTrack</txt>
     </str>
     <str>
         <tag>TXT_Contextual_Menu_Status_Page_STR_S</tag>
@@ -4618,10 +4674,6 @@ BLE_</txt>
     <str>
         <tag>TXT_Details_Page_Connect_Info_STR_S</tag>
         <txt>Nainstalujte si aplikaci Garmin Connect Mobile do svého zařízení se systémem iOS nebo Android a postupujte podle pokynů pro připojení v aplikaci.</txt>
-    </str>
-    <str>
-        <tag>TXT_Details_Page_Connected_Features_STR_S</tag>
-        <txt>Pomocí aplikace Garmin Connect Mobile spusťte službu LiveTrack a zapněte nebo vypněte ostatní připojené funkce.</txt>
     </str>
     <str>
         <tag>TXT_Details_Page_File_STR_S</tag>
@@ -5177,7 +5229,7 @@ Funkce hovorů a text. zpráv aktivujete pro iPhone 4s a novější spárování
     </str>
     <str>
         <tag>TXT_Edit_Layout_And_Data_Fields_STR_M</tag>
-        <txt>Rozlož.. a dat. pole</txt>
+        <txt>Rozlož. a dat. pole</txt>
     </str>
     <str>
         <tag>TXT_Edit_Proximity_Waypoint_STR_M</tag>
@@ -5281,7 +5333,7 @@ Funkce hovorů a text. zpráv aktivujete pro iPhone 4s a novější spárování
     </str>
     <str>
         <tag>TXT_Enter_Elevation_STR_M</tag>
-        <txt>Zadat nadmoř. výšku</txt>
+        <txt>Zadejte nadm. v.</txt>
     </str>
     <str>
         <tag>TXT_Enter_Goal_FTP_STR_M</tag>
@@ -6413,11 +6465,11 @@ Funkce hovorů a text. zpráv aktivujete pro iPhone 4s a novější spárování
     </str>
     <str>
         <tag>TXT_Graph_Lite_Title_ASC_STR_S</tag>
-        <txt>VÝST</txt>
+        <txt>VÝS.</txt>
     </str>
     <str>
         <tag>TXT_Graph_Lite_Title_DESC_STR_S</tag>
-        <txt>SEST</txt>
+        <txt>SES.</txt>
     </str>
     <str>
         <tag>TXT_Grassland_STR</tag>
@@ -6672,14 +6724,6 @@ Funkce hovorů a text. zpráv aktivujete pro iPhone 4s a novější spárování
         <txt>Helmert 1906</txt>
     </str>
     <str>
-        <tag>TXT_High_Contrast_STR_S</tag>
-        <txt>Vysoký kontrast</txt>
-    </str>
-    <str>
-        <tag>TXT_High_Contrast_STR_T</tag>
-        <txt>Vysoký kontrast</txt>
-    </str>
-    <str>
         <tag>TXT_High_Value_STR_M</tag>
         <txt>Vysoká hodnota</txt>
     </str>
@@ -6916,8 +6960,12 @@ Funkce hovorů a text. zpráv aktivujete pro iPhone 4s a novější spárování
         <txt>Máte možnost si přizp. každý profil a vytvořit jedinečná nastavení pro různé typy jízd.</txt>
     </str>
     <str>
-        <tag>TXT_INIT_SETUP_BIC_Connect_Sensors_Query_STR_M</tag>
+        <tag>TXT_INIT_SETUP_BIC_Connect_Sensors_Query_1_STR_M</tag>
         <txt>Chcete připojit snímače?</txt>
+    </str>
+    <str>
+        <tag>TXT_INIT_SETUP_BIC_Connect_Sensors_Query_2_STR_M</tag>
+        <txt>Chcete připojit další snímače?</txt>
     </str>
     <str>
         <tag>TXT_INIT_SETUP_BIC_Customize_Activity_Profile_Query_1_STR_M</tag>
@@ -7121,7 +7169,7 @@ Funkce hovorů a text. zpráv aktivujete pro iPhone 4s a novější spárování
     </str>
     <str>
         <tag>TXT_INREACH_SOS_Cancel_Tip_STR_L</tag>
-        <txt>Zrušením SOS oznámíte pohot. středisku, že už nepotřebujete pomoc, a zrušíte nouzovou situaci.</txt>
+        <txt>Zrušením SOS oznámíte poho​tovostnímu středisku, že už nepotřebujete pomoc, a zrušíte nouzovou situaci.</txt>
     </str>
     <str>
         <tag>TXT_INREACH_SOS_Cancelled_STR_L</tag>
@@ -7137,7 +7185,7 @@ Funkce hovorů a text. zpráv aktivujete pro iPhone 4s a novější spárování
     </str>
     <str>
         <tag>TXT_INREACH_SOS_I_have_an_emergency_STR_L</tag>
-        <txt>Jsem v nouzové situaci a potřebuji poslat pomoc.</txt>
+        <txt>Jsem v nouzové situaci a potřebuji poslat pomoc.</txt>
     </str>
     <str>
         <tag>TXT_INREACH_SOS_In_Progress_STR_L</tag>
@@ -7462,6 +7510,10 @@ Funkce hovorů a text. zpráv aktivujete pro iPhone 4s a novější spárování
     <str>
         <tag>TXT_Intl_Border_STR</tag>
         <txt>Mezinárodní hranice</txt>
+    </str>
+    <str>
+        <tag>TXT_Introducing_Map_Themes_STR_M</tag>
+        <txt>Představujeme témata mapy</txt>
     </str>
     <str>
         <tag>TXT_Invalid_Msg_STR_M</tag>
@@ -8024,10 +8076,6 @@ Funkce hovorů a text. zpráv aktivujete pro iPhone 4s a novější spárování
         <txt>Shrnutí okruhů</txt>
     </str>
     <str>
-        <tag>TXT_List_Slct_Light_Network_STR_M</tag>
-        <txt>Síť světel</txt>
-    </str>
-    <str>
         <tag>TXT_List_Slct_Map_STR_M</tag>
         <txt>Mapa</txt>
     </str>
@@ -8437,12 +8485,24 @@ Během aktivity se obrazovka vypne. K probuzení použijte pravou a levou bočn�
         <txt>Nouzové kontakty</txt>
     </str>
     <str>
+        <tag>TXT_MENU_SAFETY_TRACKING_GROUPTRACK_Description_STR_S</tag>
+        <txt>Zobr. LiveTrack kontaktů</txt>
+    </str>
+    <str>
         <tag>TXT_MENU_SAFETY_TRACKING_GROUPTRACK_STR_S</tag>
         <txt>GroupTrack</txt>
     </str>
     <str>
         <tag>TXT_MENU_SAFETY_TRACKING_INCIDENT_DETECTION_STR_S</tag>
         <txt>Detekce nehod</txt>
+    </str>
+    <str>
+        <tag>TXT_MENU_SAFETY_TRACKING_LIVETRACK_Description_STR_S</tag>
+        <txt>Sdílet polohu</txt>
+    </str>
+    <str>
+        <tag>TXT_MENU_SAFETY_TRACKING_LIVETRACK_STR_S</tag>
+        <txt>LiveTrack</txt>
     </str>
     <str>
         <tag>TXT_MENU_SAFETY_TRACKING_THEFT_ALARM_STR_S</tag>
@@ -8643,6 +8703,10 @@ Během aktivity se obrazovka vypne. K probuzení použijte pravou a levou bočn�
     <str>
         <tag>TXT_MENU_TRAINER_SETUP_FREE_RIDE_STR_S</tag>
         <txt>Volná jízda</txt>
+    </str>
+    <str>
+        <tag>TXT_MENU_TRAINER_SETUP_GRADE_STR_S</tag>
+        <txt>Nastavit sklon</txt>
     </str>
     <str>
         <tag>TXT_MENU_TRAINER_SETUP_RESISTANCE_STR_S</tag>
@@ -8871,6 +8935,16 @@ Během aktivity se obrazovka vypne. K probuzení použijte pravou a levou bočn�
     <str>
         <tag>TXT_Map_Points_STR_M</tag>
         <txt>Mapové body</txt>
+    </str>
+    <str>
+        <tag>TXT_Map_Theme_STR_M</tag>
+        <txt>Téma mapy</txt>
+    </str>
+    <str>
+        <tag>TXT_Map_Themes_Instructions_STR_M</tag>
+        <txt>Teď lze přizp. barev. sch. mapy a zvýr. oblíb. siln. pro urč. typ jízdy.
+
+Možnosti zobr. v nast. mapy v prof. aktivity.</txt>
     </str>
     <str>
         <tag>TXT_Map_Unlock_Already_Unlocked_STR_M</tag>
@@ -9323,11 +9397,11 @@ Trénink dokončen.</txt>
     </str>
     <str>
         <tag>TXT_Min_HR_Alert_STR_M</tag>
-        <txt>Minimální Alarm ST</txt>
+        <txt>Alarm minimál. ST</txt>
     </str>
     <str>
         <tag>TXT_Min_Power_Alert_STR_M</tag>
-        <txt>Min. Alarm výkonu</txt>
+        <txt>Alarm minim. výkonu</txt>
     </str>
     <str>
         <tag>TXT_Min__STR_M</tag>
@@ -9935,6 +10009,10 @@ Trénink dokončen.</txt>
         <txt>Nalezen snímač tempa</txt>
     </str>
     <str>
+        <tag>TXT_Notification_Calculating_Route_STR_S</tag>
+        <txt>Výpočet</txt>
+    </str>
+    <str>
         <tag>TXT_Notification_Chainring_Shift_STR_T</tag>
         <txt>Přeřadit další</txt>
     </str>
@@ -10055,12 +10133,32 @@ Trénink dokončen.</txt>
         <txt>Síť světel vytvořena</txt>
     </str>
     <str>
+        <tag>TXT_Notification_Livetrack_Auto_Start_Failed_STR_T</tag>
+        <txt>Automatické spuštění služby LiveTrack se nezdařilo</txt>
+    </str>
+    <str>
+        <tag>TXT_Notification_Livetrack_Auto_Start_Phone_Not_Connected_STR_T</tag>
+        <txt>Službu LiveTrack nebylo možné spustit, protože není k dispozici žádné telefonní spojení.</txt>
+    </str>
+    <str>
+        <tag>TXT_Notification_Livetrack_Auto_Start_Retry_On_Connection_STR_T</tag>
+        <txt>Po připojení zařízení pokus zopakuje.</txt>
+    </str>
+    <str>
+        <tag>TXT_Notification_Livetrack_Auto_Start_Timed_Out_STR_T</tag>
+        <txt>Vypršel časový limit pro automatické spuštění služby LiveTrack</txt>
+    </str>
+    <str>
         <tag>TXT_Notification_Livetrack_Ended_STR_T</tag>
         <txt>Služba LiveTrack ukonč.</txt>
     </str>
     <str>
         <tag>TXT_Notification_Livetrack_Interrupted_STR_T</tag>
         <txt>LiveTrack přerušeno</txt>
+    </str>
+    <str>
+        <tag>TXT_Notification_Livetrack_Phone_Required_STR_T</tag>
+        <txt>Funkce LiveTrack vyžaduje připojení k telefonu.</txt>
     </str>
     <str>
         <tag>TXT_Notification_Livetrack_Started_STR_T</tag>
@@ -11099,6 +11197,10 @@ Trénink dokončen.</txt>
         <txt>Oblíbený cíl pro nákladní vozy</txt>
     </str>
     <str>
+        <tag>TXT_Popularity_Map_STR_M</tag>
+        <txt>Mapa oblíben.</txt>
+    </str>
+    <str>
         <tag>TXT_Popularity_Routing_STR_M</tag>
         <txt>Trasov. podle oblíben.</txt>
     </str>
@@ -11435,12 +11537,20 @@ Trénink dokončen.</txt>
         <txt>Chcete provést odemčení?</txt>
     </str>
     <str>
+        <tag>TXT_Prompt_Page_CIQ_Edit_data_field_settings_STR_S</tag>
+        <txt>Upravit nastavení datového pole?</txt>
+    </str>
+    <str>
         <tag>TXT_Prompt_Page_CIQ_Go_to_website_to_unlock_it_STR_S</tag>
         <txt>Odemknete na stránce apps.garmin.com.</txt>
     </str>
     <str>
         <tag>TXT_Prompt_Page_CIQ_Max_Data_Flds_STR_S</tag>
         <txt>Nahradit nebo odstranit pole Connect IQ na jakékoliv datové obrazovce pro přidání další.</txt>
+    </str>
+    <str>
+        <tag>TXT_Prompt_Page_CIQ_Remove_data_field_alert_STR_S</tag>
+        <txt>Odebrat?</txt>
     </str>
     <str>
         <tag>TXT_Prompt_Page_CIQ_day_STR_S</tag>
@@ -11553,6 +11663,22 @@ Trénink dokončen.</txt>
     <str>
         <tag>TXT_Prompt_Page_Course_Record_STR_S</tag>
         <txt>Záznam trasy</txt>
+    </str>
+    <str>
+        <tag>TXT_Prompt_Page_Course_Sharing_Enabled_Disclaimer_STR_S</tag>
+        <txt>Když je aktivní relace LiveTrack, vaši příjemci mohou sledovat vaši aktuální trasu.</txt>
+    </str>
+    <str>
+        <tag>TXT_Prompt_Page_Course_Sharing_Enabled_Title_STR_S</tag>
+        <txt>Sdílení trasy LiveTrack aktivováno</txt>
+    </str>
+    <str>
+        <tag>TXT_Prompt_Page_Course_Sharing_Reminder_STR_S</tag>
+        <txt>Chcete tuto trasu sdílet se svými příjemci LiveTrack?</txt>
+    </str>
+    <str>
+        <tag>TXT_Prompt_Page_Course_Sharing_Select_Course_STR_S</tag>
+        <txt>Chcete vybrat uloženou trasu?</txt>
     </str>
     <str>
         <tag>TXT_Prompt_Page_Course_Start_STR_S</tag>
@@ -12618,6 +12744,11 @@ Odemkněte ji stisknutím a přidržením zapínacího tlačítka.</txt>
     <str>
         <tag>TXT_Prompt_Page_Simulate_Route_STR_S</tag>
         <txt>Simulovat pohyb po této trase?</txt>
+    </str>
+    <str>
+        <tag>TXT_Prompt_Page_Skip_Initial_Sync_STR_S</tag>
+        <txt>Opravdu chcete přeskočit?
+Stále přenášíme data důležitá pro nastavení počítače Edge.</txt>
     </str>
     <str>
         <tag>TXT_Prompt_Page_Skip_Phone_Setup_STR_S</tag>
@@ -13720,10 +13851,6 @@ Aktualizujte software snímače výkonu.</txt>
         <txt>Doba regenerace</txt>
     </str>
     <str>
-        <tag>TXT_Recovery_Check_STR_S</tag>
-        <txt>Kontrola regenerace</txt>
-    </str>
-    <str>
         <tag>TXT_Recovery_STR_L</tag>
         <txt>Regenerace</txt>
     </str>
@@ -14404,10 +14531,6 @@ Aktualizujte software snímače výkonu.</txt>
         <txt>Zázn. obt./pl./skoků</txt>
     </str>
     <str>
-        <tag>TXT_SETUP_ACTIVITY_PROFILE_MTB_USE_MTB_MAP_THEME_STR_M</tag>
-        <txt>Použít mapu MTB</txt>
-    </str>
-    <str>
         <tag>TXT_SETUP_ACTIVITY_PROFILE_NAVIGATION_STR_M</tag>
         <txt>Navigace</txt>
     </str>
@@ -14752,8 +14875,32 @@ Aktualizujte software snímače výkonu.</txt>
         <txt>Spuštění časovače</txt>
     </str>
     <str>
+        <tag>TXT_SETUP_BLUETOOTH_Checking_For_Updates_STR_S</tag>
+        <txt>Probíhá vyhledávání aktualizací...</txt>
+    </str>
+    <str>
         <tag>TXT_SETUP_BLUETOOTH_Enable_STR_S</tag>
         <txt>Povolit</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_BLUETOOTH_Sync_Activity_In_Progress_STR_S</tag>
+        <txt>Probíhá aktivita</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_BLUETOOTH_Sync_Complete_STR_S</tag>
+        <txt>Synchronizace dokončena</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_BLUETOOTH_Sync_Failed_STR_S</tag>
+        <txt>Synchronizace se nezdařila</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_BLUETOOTH_Sync_Now_STR_S</tag>
+        <txt>Synchronizovat</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_BLUETOOTH_Syncing_STR_S</tag>
+        <txt>Synchronizování...</txt>
     </str>
     <str>
         <tag>TXT_SETUP_BLUETOOTH_Wireless_Searching_STR_S</tag>
@@ -14828,6 +14975,14 @@ Aktualizujte software snímače výkonu.</txt>
         <txt>Zpět na start</txt>
     </str>
     <str>
+        <tag>TXT_SETUP_CONTROLS_CONNECT_IQ_Fields_STR_S</tag>
+        <txt>Dat. pole Connect IQ</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_CONTROLS_CONNECT_IQ_Options_STR_S</tag>
+        <txt>Možnosti</txt>
+    </str>
+    <str>
         <tag>TXT_SETUP_CONTROLS_Cancel_Target_STR_S</tag>
         <txt>Zrušit cíl</txt>
     </str>
@@ -14862,6 +15017,30 @@ Aktualizujte software snímače výkonu.</txt>
     <str>
         <tag>TXT_SETUP_CONTROLS_Set_Theft_Alarm_STR_S</tag>
         <txt>Nast. Alarm kola</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_CONTROLS_Start_Livetrack_STR_S</tag>
+        <txt>Spustit LiveTrack</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_CONTROLS_Status_GPS_Off_STR_S</tag>
+        <txt>GPS vypnuto</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_CONTROLS_Status_No_Phone_STR_S</tag>
+        <txt>Telefon odpojen</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_CONTROLS_Status_No_Recipients_STR_S</tag>
+        <txt>Žádní příjemci</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_CONTROLS_Status_Ready_STR_S</tag>
+        <txt>Připraveno</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_CONTROLS_Status_Stopping_STR_S</tag>
+        <txt>Zastavování</txt>
     </str>
     <str>
         <tag>TXT_SETUP_CONTROLS_Stop_Battery_Save_Mode_STR_S</tag>
@@ -14909,11 +15088,11 @@ Aktualizujte software snímače výkonu.</txt>
     </str>
     <str>
         <tag>TXT_SETUP_COURSE_CLIMB_Climb_STR_S</tag>
-        <txt>Stoup.</txt>
+        <txt>Stoupání</txt>
     </str>
     <str>
         <tag>TXT_SETUP_COURSE_CLIMB_Climbs_STR_S</tag>
-        <txt>%1 st.</txt>
+        <txt>Stoupání: %1</txt>
     </str>
     <str>
         <tag>TXT_SETUP_COURSE_CLIMB_Dist_To_Go_STR_S</tag>
@@ -14925,7 +15104,7 @@ Aktualizujte software snímače výkonu.</txt>
     </str>
     <str>
         <tag>TXT_SETUP_COURSE_CLIMB_No_Climb_STR_S</tag>
-        <txt>Žád.st.</txt>
+        <txt>Žád stoup</txt>
     </str>
     <str>
         <tag>TXT_SETUP_COURSE_CLIMB_No_Upcoming_Climb_STR_S</tag>
@@ -15164,6 +15343,10 @@ Aktualizujte software snímače výkonu.</txt>
         <txt>Zobraz. vždy</txt>
     </str>
     <str>
+        <tag>TXT_SETUP_COURSE_SETTINGS_Cached_STR_S</tag>
+        <txt>V mezipaměti</txt>
+    </str>
+    <str>
         <tag>TXT_SETUP_COURSE_SETTINGS_Color_STR_S</tag>
         <txt>Barva</txt>
     </str>
@@ -15172,8 +15355,20 @@ Aktualizujte software snímače výkonu.</txt>
         <txt>Body trasy</txt>
     </str>
     <str>
+        <tag>TXT_SETUP_COURSE_SETTINGS_Forget_Calculation_STR_S</tag>
+        <txt>Odebrat z mezipaměti?</txt>
+    </str>
+    <str>
         <tag>TXT_SETUP_COURSE_SETTINGS_Name_STR_S</tag>
         <txt>Název</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_COURSE_SETTINGS_Not_Cached_STR_S</tag>
+        <txt>Není v mezipaměti</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_COURSE_SETTINGS_Route_Calculation_STR_S</tag>
+        <txt>Výpočet trasy</txt>
     </str>
     <str>
         <tag>TXT_SETUP_DATA_AVERAGING_Cadence_STR_S</tag>
@@ -15544,6 +15739,98 @@ Aktualizujte software snímače výkonu.</txt>
         <txt>Vyberte rozložení</txt>
     </str>
     <str>
+        <tag>TXT_SETUP_LIVETRACK_RECIPIENT_LIST_Email_STR_M</tag>
+        <txt>E-mail</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_LIVETRACK_RECIPIENT_LIST_GroupTrack_STR_M</tag>
+        <txt>GroupTrack</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_LIVETRACK_RECIPIENT_LIST_Recipients_STR_M</tag>
+        <txt>Příjemci</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_LIVETRACK_RECIPIENT_LIST_Strava_STR_M</tag>
+        <txt>Strava</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_LIVETRACK_SETTINGS_Auto_Start_No_Recipients_STR_M</tag>
+        <txt>Žádní příjemci. Nastavte pomocí aplikace Garmin Connect.</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_LIVETRACK_SETTINGS_Auto_Start_STR_S</tag>
+        <txt>Aut. spuš.</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_LIVETRACK_SETTINGS_Course_Sharing_STR_M</tag>
+        <txt>Sdílení trasy</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_LIVETRACK_SETTINGS_LiveTrack_STR_M</tag>
+        <txt>LiveTrack</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_LIVETRACK_SETTINGS_Livetrack_Error_Code_STR_M</tag>
+        <txt>Chybový kód: %1</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_LIVETRACK_SETTINGS_Livetrack_Failed_STR_M</tag>
+        <txt>Služba LiveTrack selhala</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_LIVETRACK_SETTINGS_Name_STR_S</tag>
+        <txt>Název LiveTrack</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_LIVETRACK_SETTINGS_Recipients_STR_S</tag>
+        <txt>Příjemci</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_LIVETRACK_SETTINGS_Start_LiveTrack_STR_M</tag>
+        <txt>Spustit LiveTrack</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_LIVETRACK_SETTINGS_Status_Active_STR_S</tag>
+        <txt>Aktivní</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_LIVETRACK_SETTINGS_Status_GPS_Off_STR_S</tag>
+        <txt>GPS vypnuto</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_LIVETRACK_SETTINGS_Status_No_Phone_STR_S</tag>
+        <txt>Telefon odpojen</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_LIVETRACK_SETTINGS_Status_No_Recipients_STR_S</tag>
+        <txt>Žádní příjemci</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_LIVETRACK_SETTINGS_Status_Ready_Next_Activity_STR_S</tag>
+        <txt>Připraveno: Další akt.</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_LIVETRACK_SETTINGS_Status_Ready_STR_S</tag>
+        <txt>Připraveno</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_LIVETRACK_SETTINGS_Status_Starting_STR_S</tag>
+        <txt>Spuštění</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_LIVETRACK_SETTINGS_Status_Stopping_STR_S</tag>
+        <txt>Zastavování</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_LIVETRACK_SETTINGS_Stop_LiveTrack_STR_M</tag>
+        <txt>Zast. LiveTrack</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_LIVETRACK_SETTINGS_TIP_Need_Configuration_STR_M</tag>
+        <txt>Nastavte pomocí aplikace Garmin Connect.</txt>
+    </str>
+    <str>
         <tag>TXT_SETUP_MAP_TIMER_Always_STR_M</tag>
         <txt>Vždy</txt>
     </str>
@@ -15650,6 +15937,14 @@ Aktualizujte software snímače výkonu.</txt>
     <str>
         <tag>TXT_SETUP_NOTIFICATIONS_Notifications_STR_T</tag>
         <txt>Oznámení</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_NO_CONNECTION_Light_Disconnected_STR_S</tag>
+        <txt>Světlo odpojeno</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_NO_CONNECTION_Light_STR_T</tag>
+        <txt>Světlo</txt>
     </str>
     <str>
         <tag>TXT_SETUP_NO_CONNECTION_Phone_Connection_Required_STR_S</tag>
@@ -16276,6 +16571,10 @@ Aktualizujte software snímače výkonu.</txt>
         <txt>Podrobnosti o elektrickém kole</txt>
     </str>
     <str>
+        <tag>TXT_SETUP_SENSOR_DETAILS_Error_Self_Link_STR_M</tag>
+        <txt>Pedál nelze spárovat sám se sebou.</txt>
+    </str>
+    <str>
         <tag>TXT_SETUP_SENSOR_DETAILS_Front_Gears_STR_M</tag>
         <txt>Přední převody</txt>
     </str>
@@ -16301,7 +16600,7 @@ Aktualizujte software snímače výkonu.</txt>
     </str>
     <str>
         <tag>TXT_SETUP_SENSOR_DETAILS_Network_STR_M</tag>
-        <txt>Síť</txt>
+        <txt>Typ připojení</txt>
     </str>
     <str>
         <tag>TXT_SETUP_SENSOR_DETAILS_Pair_Pedal_STR_M</tag>
@@ -16449,7 +16748,7 @@ Aktualizujte software snímače výkonu.</txt>
     </str>
     <str>
         <tag>TXT_SETUP_SENSOR_SEARCH_Searching_for_Ebike_STR_S</tag>
-        <txt>Chcete-li elektrické kolo připojit, zapněte je.</txt>
+        <txt>Chcete-li elektrické kolo připojit, zapněte jej.</txt>
     </str>
     <str>
         <tag>TXT_SETUP_SENSOR_SEARCH_Searching_for_Edge_Remote_STR_S</tag>
@@ -16462,6 +16761,10 @@ Aktualizujte software snímače výkonu.</txt>
     <str>
         <tag>TXT_SETUP_SENSOR_SEARCH_Searching_for_Power_Sensor_STR_S</tag>
         <txt>Chcete-li připojit snímače výkonu, otáčejte klikami pedálu.</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_SENSOR_SEARCH_Searching_for_Radar_STR_S</tag>
+        <txt>Chcete-li se připojit k radaru, zapněte jej v režimu párování.</txt>
     </str>
     <str>
         <tag>TXT_SETUP_SENSOR_SEARCH_Searching_for_Shifting_STR_S</tag>
@@ -17136,6 +17439,14 @@ Aktualizujte software snímače výkonu.</txt>
         <txt>Ovládací prvky</txt>
     </str>
     <str>
+        <tag>TXT_SETUP_WIDGET_MANAGEMENT_InReach_STR_S</tag>
+        <txt>Ovl.inReach</txt>
+    </str>
+    <str>
+        <tag>TXT_SETUP_WIDGET_MANAGEMENT_Light_STR_S</tag>
+        <txt>Světlo</txt>
+    </str>
+    <str>
         <tag>TXT_SETUP_WIDGET_MANAGEMENT_Move_Item_STR_S</tag>
         <txt>Přesuňte položku.</txt>
     </str>
@@ -17513,7 +17824,7 @@ Aktualizujte software snímače výkonu.</txt>
     </str>
     <str>
         <tag>TXT_SHIMANO_STEPS_Assist_Mode_High_STR_M</tag>
-        <txt>Vys.</txt>
+        <txt>Vysoká</txt>
     </str>
     <str>
         <tag>TXT_SHIMANO_STEPS_Assist_Mode_Normal_STR_M</tag>
@@ -17584,6 +17895,10 @@ Aktualizujte software snímače výkonu.</txt>
         <txt>Aktualizace softwaru</txt>
     </str>
     <str>
+        <tag>TXT_SOFTWARE_UPDATE_Up_To_STR_S</tag>
+        <txt>Až do</txt>
+    </str>
+    <str>
         <tag>TXT_SOFTWARE_UPDATE_Version_STR_M</tag>
         <txt>Verze softwaru</txt>
     </str>
@@ -17610,6 +17925,10 @@ Aktualizujte software snímače výkonu.</txt>
     <str>
         <tag>TXT_STATUS_BAR_Calibrate_STR_S</tag>
         <txt>Kalibrovat</txt>
+    </str>
+    <str>
+        <tag>TXT_STATUS_BAR_Checking_For_Updates_STR_S</tag>
+        <txt>Probíhá vyhledávání aktualizací...</txt>
     </str>
     <str>
         <tag>TXT_STATUS_BAR_GPS_STR_S</tag>
@@ -17670,6 +17989,26 @@ Aktualizujte software snímače výkonu.</txt>
     <str>
         <tag>TXT_STATUS_BAR_Sensors_S</tag>
         <txt>Snímače</txt>
+    </str>
+    <str>
+        <tag>TXT_STATUS_BAR_Sync_Activity_In_Progress_STR_S</tag>
+        <txt>Probíhá aktivita</txt>
+    </str>
+    <str>
+        <tag>TXT_STATUS_BAR_Sync_Complete_STR_S</tag>
+        <txt>Synchronizace dokončena</txt>
+    </str>
+    <str>
+        <tag>TXT_STATUS_BAR_Sync_Failed_STR_S</tag>
+        <txt>Synchronizace se nezdařila</txt>
+    </str>
+    <str>
+        <tag>TXT_STATUS_BAR_Sync_Now_STR_S</tag>
+        <txt>Synchronizovat</txt>
+    </str>
+    <str>
+        <tag>TXT_STATUS_BAR_Syncing_STR_S</tag>
+        <txt>Synchronizování...</txt>
     </str>
     <str>
         <tag>TXT_STATUS_BAR_Temperature_STR_S</tag>
@@ -18067,7 +18406,7 @@ výběru trasy.</txt>
     </str>
     <str>
         <tag>TXT_SUMMARY_HISTORY_Average_STR_T</tag>
-        <txt>Průměrné</txt>
+        <txt>Průměr</txt>
     </str>
     <str>
         <tag>TXT_SUMMARY_HISTORY_Average_Speed_STR_T</tag>
@@ -18183,7 +18522,7 @@ výběru trasy.</txt>
     </str>
     <str>
         <tag>TXT_SUMMARY_HISTORY_Maximum_STR_T</tag>
-        <txt>Maximální</txt>
+        <txt>Maximum</txt>
     </str>
     <str>
         <tag>TXT_SUMMARY_HISTORY_Maximum_Speed_STR_T</tag>
@@ -20642,6 +20981,102 @@ výběru trasy.</txt>
         <txt>Příliš nízká teplota</txt>
     </str>
     <str>
+        <tag>TXT_TRAINER_CONTROL_Watts_abbr_STR_S</tag>
+        <txt>W</txt>
+    </str>
+    <str>
+        <tag>TXT_TRAINER_Grade_STR_T</tag>
+        <txt>Sklon</txt>
+    </str>
+    <str>
+        <tag>TXT_TRAINER_Power_STR_T</tag>
+        <txt>Výkon</txt>
+    </str>
+    <str>
+        <tag>TXT_TRAINER_ROAD_FEEL_Brick_Road_STR_M</tag>
+        <txt>Cihlová dlažba</txt>
+    </str>
+    <str>
+        <tag>TXT_TRAINER_ROAD_FEEL_Brick_Road_STR_S</tag>
+        <txt>Cihlová dlažba</txt>
+    </str>
+    <str>
+        <tag>TXT_TRAINER_ROAD_FEEL_Cattle_Grid_STR_M</tag>
+        <txt>Mřížové panely</txt>
+    </str>
+    <str>
+        <tag>TXT_TRAINER_ROAD_FEEL_Cattle_Grid_STR_S</tag>
+        <txt>Mřížové panely</txt>
+    </str>
+    <str>
+        <tag>TXT_TRAINER_ROAD_FEEL_Cobblestones_1_STR_M</tag>
+        <txt>Dlažební kostky 1</txt>
+    </str>
+    <str>
+        <tag>TXT_TRAINER_ROAD_FEEL_Cobblestones_1_STR_S</tag>
+        <txt>Dlažební kostky 1</txt>
+    </str>
+    <str>
+        <tag>TXT_TRAINER_ROAD_FEEL_Cobblestones_2_STR_M</tag>
+        <txt>Dlažební kostky 2</txt>
+    </str>
+    <str>
+        <tag>TXT_TRAINER_ROAD_FEEL_Cobblestones_2_STR_S</tag>
+        <txt>Dlažební kostky 2</txt>
+    </str>
+    <str>
+        <tag>TXT_TRAINER_ROAD_FEEL_Concrete_Plates_STR_M</tag>
+        <txt>Betonové panely</txt>
+    </str>
+    <str>
+        <tag>TXT_TRAINER_ROAD_FEEL_Concrete_Plates_STR_S</tag>
+        <txt>Betonové panely</txt>
+    </str>
+    <str>
+        <tag>TXT_TRAINER_ROAD_FEEL_Gravel_STR_M</tag>
+        <txt>Štěrk</txt>
+    </str>
+    <str>
+        <tag>TXT_TRAINER_ROAD_FEEL_Gravel_STR_S</tag>
+        <txt>Štěrk</txt>
+    </str>
+    <str>
+        <tag>TXT_TRAINER_ROAD_FEEL_Ice_STR_M</tag>
+        <txt>Led</txt>
+    </str>
+    <str>
+        <tag>TXT_TRAINER_ROAD_FEEL_Ice_STR_S</tag>
+        <txt>Led</txt>
+    </str>
+    <str>
+        <tag>TXT_TRAINER_ROAD_FEEL_Off_Road_STR_M</tag>
+        <txt>Nezpevněný povrch</txt>
+    </str>
+    <str>
+        <tag>TXT_TRAINER_ROAD_FEEL_Off_Road_STR_S</tag>
+        <txt>Nezpevněný povrch</txt>
+    </str>
+    <str>
+        <tag>TXT_TRAINER_ROAD_FEEL_Off_STR_M</tag>
+        <txt>Vypnuto</txt>
+    </str>
+    <str>
+        <tag>TXT_TRAINER_ROAD_FEEL_Off_STR_S</tag>
+        <txt>Vypnuto</txt>
+    </str>
+    <str>
+        <tag>TXT_TRAINER_ROAD_FEEL_Wooden_Boards_STR_M</tag>
+        <txt>Dřevěná prkna</txt>
+    </str>
+    <str>
+        <tag>TXT_TRAINER_ROAD_FEEL_Wooden_Boards_STR_S</tag>
+        <txt>Dřevěná prkna</txt>
+    </str>
+    <str>
+        <tag>TXT_TRAINER_Resistance_STR_T</tag>
+        <txt>Odpor</txt>
+    </str>
+    <str>
         <tag>TXT_TRAINING_BALANCE_FEEDBACK_PHRASE_0_STR_S</tag>
         <txt>Žád. výs.</txt>
     </str>
@@ -21118,10 +21553,6 @@ výběru trasy.</txt>
         <txt>Shrnutí okruhů</txt>
     </str>
     <str>
-        <tag>TXT_Title_Light_Network_STR_M</tag>
-        <txt>Síť světel</txt>
-    </str>
-    <str>
         <tag>TXT_Title_Map_STR_M</tag>
         <txt>Mapa</txt>
     </str>
@@ -21258,12 +21689,20 @@ výběru trasy.</txt>
         <txt>Aplikace Trailforks Connect IQ není v zařízení uložena.</txt>
     </str>
     <str>
+        <tag>TXT_Trailforks_Connection_Required_STR_M</tag>
+        <txt>Je zapotřebí internetové připojení</txt>
+    </str>
+    <str>
         <tag>TXT_Trailforks_Login_Button_STR_M</tag>
         <txt>Přihlásit se</txt>
     </str>
     <str>
         <tag>TXT_Trailforks_Login_Message_STR_M</tag>
         <txt>Přihlaste se ke svému účtu v aplikaci Trailforks, kde získáte přístup k mapám stezek pro horská kola.</txt>
+    </str>
+    <str>
+        <tag>TXT_Trailforks_Transferring_Credentials_STR_M</tag>
+        <txt>Přenášení přihlašovacích údajů</txt>
     </str>
     <str>
         <tag>TXT_Trailforks_Unlock_Request_STR_S</tag>

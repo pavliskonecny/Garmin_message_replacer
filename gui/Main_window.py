@@ -62,12 +62,26 @@ class Main_window(QMainWindow):
             if self.ui.chcbBackup.isChecked():
                 self._add_output("Creating backup ..... ")
                 backup_dir = "backup"
-                today = My_Time.today()
-                source_file_path = self.ui.lnePath.text()
-                file_name = my_files.get_file_name(source_file_path)
                 my_files.make_dir(backup_dir)
+                today = My_Time.today()
                 my_files.make_dir(f"{backup_dir}\\{today}")
-                my_files.copy_file(source_file_path, f"{backup_dir}\\{today}\\{file_name}")
+                my_files.make_dir(f"{backup_dir}\\{today}\\Text")
+
+                # language file backup
+                lang_name = my_files.get_file_name(source_file_path)
+                my_files.copy_file(source_file_path, f"{backup_dir}\\{today}\\Text\\{lang_name}")
+
+                # settings file backup
+                drive_letter = my_files.get_drive_from_path(source_file_path)
+                Locations_file = drive_letter + "\\Garmin\\Locations"
+                Records_file = drive_letter + "\\Garmin\\Records"
+                Settings_file = drive_letter + "\\Garmin\\Settings"
+                Sports_file = drive_letter + "\\Garmin\\Sports"
+                if my_files.exist_dir(Locations_file):
+                    my_files.copy_dir(Locations_file, f"{backup_dir}\\{today}\\Locations")
+                    my_files.copy_dir(Records_file, f"{backup_dir}\\{today}\\Records")
+                    my_files.copy_dir(Settings_file, f"{backup_dir}\\{today}\\Settings")
+                    my_files.copy_dir(Sports_file, f"{backup_dir}\\{today}\\Sports")
 
             self._add_output("Writing file ..... ")
             if self.ui.chcbOverwrite.isChecked():

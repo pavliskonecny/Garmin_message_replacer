@@ -1,7 +1,6 @@
 import os
 import sys
 import json
-from shutil import copyfile
 
 
 def read_file(f_name: str) -> str:
@@ -19,9 +18,19 @@ def write_file(f_name: str, text: str):
     with open(f_name, mode='w', encoding='utf-8', newline='') as file:
         print(text, file=file)
 
+
 def copy_file(source_path: str, destination_path: str):
     # destination folders have to exist as first!!!
+    from shutil import copyfile
     copyfile(source_path, destination_path)
+
+
+def copy_dir(source_dir: str, destination_dir: str, rewrite: bool = True):
+    from shutil import copytree, rmtree
+    if rewrite:
+        if exist_dir(destination_dir):
+            rmtree(destination_dir)
+    copytree(source_dir, destination_dir)
 
 def exist_file(file_name: str) -> bool:
     """
@@ -113,3 +122,9 @@ def get_files_with_extension(extension: str) -> list:
             files.append(file)
 
     return files
+
+
+def get_drive_from_path(file_path: str) -> str:
+    drive_tail = os.path.splitdrive(file_path)
+    return drive_tail[0]    # Like - C:
+    # return drive_tail[1]  # Like - \User\Documents\file.txt

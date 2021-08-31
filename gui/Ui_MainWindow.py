@@ -130,14 +130,14 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Garmin message replacer 1.0.1"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Garmin message replacer 1.0.2"))
         self.psbStart.setText(_translate("MainWindow", "START\n"
 "messages\n"
 "replacing"))
         self.lblHint.setText(_translate("MainWindow", "Please, select desired language file *.GTT to replace messages:"))
         self.psbBrowse.setText(_translate("MainWindow", "Browse ..."))
         self.chcbOverwrite.setText(_translate("MainWindow", "Overwrite origin language file *.GTT"))
-        self.chcbBackup.setText(_translate("MainWindow", "Make backup of language file *.GTT"))
+        self.chcbBackup.setText(_translate("MainWindow", "Make backup of language and settings files - if available"))
         self.actAbout.setText(_translate("MainWindow", "About"))
         self.actAbout.setToolTip(_translate("MainWindow", "About"))
 from . import resources_rc
